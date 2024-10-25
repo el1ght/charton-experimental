@@ -2,20 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background: radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 255, 255) 0%, rgba(169, 169, 169) 100%) !important;
+  color: #000 !important;
+  overflow: hidden !important;
+}
+
+html,
+body,
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  height: 100%;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+.top-left {
+  --r: 15px; /* the radius */
+  --s: 25px; /* the size of the cut */
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  --_m:/calc(2*var(--r)) calc(2*var(--r))
+  radial-gradient(#000 70%,#0000 72%) no-repeat;
+  mask:
+          right 0 bottom calc(var(--s) + var(--r)) var(--_m),
+          right calc(var(--s) + var(--r)) bottom 0 var(--_m),
+          radial-gradient(var(--s) at 100% 100%,#0000 99%,#000 101%)
+          calc(-1*var(--r)) calc(-1*var(--r)) no-repeat,
+          conic-gradient(from 90deg at calc(100% - var(--s) - 2*var(--r)) calc(100% - var(--s) - 2*var(--r)),
+          #0000 25%,#000 0);
 }
