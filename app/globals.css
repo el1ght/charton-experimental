@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --safe-area-bottom: (100vh - var(--tg-viewport-stable-height,100vh))
+}
+
+.footer{
+    padding-bottom: var(--safe-area-bottom)
+}
+
 body{
   background: radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 255, 255) 0%, rgba(169, 169, 169) 100%) !important;
   color: #000 !important;

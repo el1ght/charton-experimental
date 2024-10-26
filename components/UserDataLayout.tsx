@@ -84,7 +84,7 @@ const UserDataLayout = ({
                         </div>
                     </div>
                     <div className={'relative row-span-6 col-span-2 rounded-3xl overflow-hidden'}>
-                        <div className={"group flex items-center h-full bg-cover bg-center bg-[#424242] overflow-hidden hover:saturate-150 transition"}>
+                        <div className={"group flex items-center h-full bg-cover bg-center bg-[red] overflow-hidden hover:saturate-150 transition"}>
                             <div className={'relative h-full w-full bg-black/[.3] rounded-3xl flex flex-col items-center justify-center'}>
                                 <p className={'truncate text-white text-[1.5rem] max-w-[100px] font-medium'}></p>
                                 <p className={'truncate text-white text-[1.5rem] max-w-[100px] font-medium'}></p>
@@ -134,7 +134,7 @@ const UserDataLayout = ({
                         </div>
                     </div>
                     <div className={'relative row-span-6 col-span-2 rounded-3xl overflow-hidden'}>
-                        <div className={"group flex items-center h-full bg-cover bg-center bg-[#424242] overflow-hidden hover:saturate-150 transition"}>
+                        <div className={"group flex items-center h-full bg-cover bg-center bg-[red] overflow-hidden hover:saturate-150 transition"}>
                             <div className={'relative h-full w-full bg-black/[.3] rounded-3xl flex flex-col items-center justify-center'}>
                                 <p className={'truncate text-white text-[1.5rem] max-w-[100px] font-medium'}></p>
                                 <p className={'truncate text-white text-[1.5rem] max-w-[100px] font-medium'}></p>
