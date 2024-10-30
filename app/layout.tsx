@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} antialiased`}
       >
-          <div className={'h-full flex flex-col gap-[2px] p-0.5'}>
+          <div className={'h-full flex flex-col gap-[2px] p-0.5 box'}>
               <Header />
               <Content>
                   {children}
