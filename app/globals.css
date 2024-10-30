@@ -6,12 +6,12 @@
     --safe-area-bottom: (100vh - var(--tg-viewport-stable-height,100vh))
 }
 
-.footer{
-    padding-bottom: var(--safe-area-bottom)
-}
+/*.footer{*/
+/*    padding-bottom: var(--safe-area-bottom)*/
+/*}*/
 
 .box{
-    padding-bottom: var(--safe-area-bottom)
+    margin-bottom: var(--safe-area-bottom)
 }
 
 body{

@@ -15,7 +15,7 @@ const LikedWidget: React.FC<ListItemProps> = (({
 
     return (
         <Link href={href} className={'row-span-2 col-span-5'}>
-            <div className={"rounded-3xl relative group flex items-center h-full bg-cover bg-center overflow-hidden hover:saturate-150 transition bg-[#424242] box"}>
+            <div className={"rounded-3xl relative group flex items-center h-full bg-cover bg-center overflow-hidden hover:saturate-150 transition bg-[#424242]"}>
                 <div className={'relative h-full w-full bg-black/[.25] '}>
                     <p className={'truncate text-white text-left m-4 mb-0 text-lg font-medium'}>{name}</p>
                     <p className={'truncate text-white text-left ml-4 text-[0.7rem] max-w-[150px]'}></p>
