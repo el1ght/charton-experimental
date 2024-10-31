@@ -5,6 +5,7 @@ import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 import Content from "@/components/Content";
 import Script from "next/script";
+import ToasterProvider from "@/providers/ToasterProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} antialiased`}
       >
           <div className={'h-full flex flex-col gap-[2px] p-0.5 box'}>
+              <ToasterProvider />
               <Header />
               <Content>
                   {children}
