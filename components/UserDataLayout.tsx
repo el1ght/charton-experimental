@@ -72,8 +72,8 @@ const UserDataLayout = ({
 
                 <div className="grid grid-rows-8 grid-cols-5 gap-[.4rem] h-[100vh] box">
                     <LikedWidget name={'Liked Songs'} href={'/liked'} />
-                    <div className={'relative row-span-2 col-span-3 rounded-3xl overflow-hidden border-none'}>
-                        <div className={"relative group flex items-center h-full bg-cover bg-center bg-[url('../public/images/favBg.jpg')] overflow-hidden hover:saturate-150 transition top-left"}>
+                    <div className={'relative row-span-2 col-span-3 rounded-3xl overflow-hidden rounded-br-none'}>
+                        <div className={"relative group flex items-center h-full bg-cover bg-center bg-[url('../public/images/favBg.jpg')] overflow-hidden hover:saturate-150 transition top-left "}>
                             <div className={'relative h-full w-full bg-black/[.3]'}>
                                 <p className={'truncate text-white text-left m-4 mb-0 text-md font-semibold'}>World Top</p>
                                 <p className={'truncate text-white text-left ml-4 text-[0.6rem] max-w-[100px]'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
@@ -83,7 +83,7 @@ const UserDataLayout = ({
                             <FaPlay size={16} className={'text-black'} />
                         </div>
                     </div>
-                    <div className={'relative row-span-6 col-span-2 rounded-3xl overflow-hidden border-none'}>
+                    <div className={'relative row-span-6 col-span-2 rounded-3xl overflow-hidden rounded-br-none'}>
                         <div className={"group flex items-center h-full bg-cover bg-center bg-[url('../public/images/favBg-5.jpg')] overflow-hidden hover:saturate-150 transition"}>
                             <div className={'relative h-full w-full bg-black/[.3] rounded-3xl flex flex-col items-center justify-center'}>
                                 <p className={'truncate text-white text-[1.5rem] max-w-[100px] font-semibold'}>TRY</p>
@@ -92,7 +92,7 @@ const UserDataLayout = ({
                             </div>
                         </div>
                     </div>
-                    <div className={'relative row-span-2 col-span-3 rounded-3xl overflow-hidden border-none'}>
+                    <div className={'relative row-span-2 col-span-3 rounded-3xl overflow-hidden rounded-br-none'}>
                         <div className={"relative group flex items-center h-full bg-cover bg-center bg-[url('../public/images/favBg-4.jpg')] overflow-hidden hover:saturate-150 transition top-left"}>
                             <div className={'relative h-full w-full bg-black/[.3]'}>
                                 <p className={'truncate text-white text-left m-4 mb-0 text-md font-semibold'}>Greatest Hits</p>
@@ -103,7 +103,7 @@ const UserDataLayout = ({
                             <FaPlay size={16} className={'text-black'} />
                         </div>
                     </div>
-                    <div className={'relative row-span-2 col-span-3 rounded-3xl overflow-hidden border-none'}>
+                    <div className={'relative row-span-2 col-span-3 rounded-3xl overflow-hidden rounded-br-none'}>
                         <div className={"relative group flex items-center h-full bg-cover bg-center bg-[url('../public/images/favBg-3.jpg')] overflow-hidden hover:saturate-150 transition top-left"}>
                             <div className={'relative h-full w-full bg-black/[.3]'}>
                                 <p className={'truncate text-white text-left m-4 mb-0 text-md font-semibold'}>Top Artists</p>
