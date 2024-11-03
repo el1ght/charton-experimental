@@ -61,12 +61,12 @@ const UserDataLayout = ({
     return (
         userData ? (
             <div className={'p-6 box'}>
-                <div className="mb-4">
-                    <h1 className="text-black text-xl font-semibold">
-                        Welcome Home, {userData.first_name}
+                <div className="mb-3">
+                    <h1 className="text-[#585858] text-[0.8rem]">
+                        Welcome Home
                     </h1>
-                    <h2 className="text-black text-lg">
-                        See what we have for you
+                    <h2 className="text-black text-lg font-semibold">
+                        {userData.first_name}, you may like this
                     </h2>
                 </div>
 
@@ -120,7 +120,6 @@ const UserDataLayout = ({
         ) : (
             <div className={'h-full p-6 box'}>
                 Loading...
-
             </div>
         )
     );
