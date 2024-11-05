@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root{
-    --safe-area-bottom: (100vh - var(--tg-viewport-stable-height,100vh))
+    --safe-area-bottom: calc(100vh - var(--tg-viewport-stable-height,100vh))
 }
 
 /*.footer{*/
@@ -11,7 +11,8 @@
 /*}*/
 
 .box{
-    margin-bottom: var(--safe-area-bottom)
+    padding-bottom: calc(1rem + var(--safe-area-inset-bottom));
+    /*padding-bottom: var(--safe-area-inset-bottom);*/
 }
 
 body{
