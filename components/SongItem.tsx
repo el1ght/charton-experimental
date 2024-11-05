@@ -29,16 +29,16 @@ const SongItem: React.FC<SongItemProps> = ({
                 <div className={'flex flex-row gap-x-2 items-center'}>
                     <Image className={'w-[50px] h-[50px] rounded-2xl'} src={'/images/favBg-4.jpg'} alt={"Image"} width={40} height={40} />
                     <div className={'flex flex-col max-w-[100px]'}>
-                        <h3 className={' truncate text-[0.9rem] font-bold'}>{data.title}</h3>
+                        <h3 className={' truncate text-[1rem] font-bold'}>{data.title}</h3>
 
-                        <p className={'text-[0.6rem] truncate text-neutral-600'}>{data.author}</p>
+                        <p className={'text-[0.8rem] truncate text-neutral-600'}>{data.author}</p>
                     </div>
                 </div>
             </div>
 
-            <div className={'flex flex-row gap-x-3'}>
-                <p className={'text-[0.6rem] leading-5'}>2:55</p>
-                <FiHeart size={18} />
+            <div className={'flex flex-row gap-x-4'}>
+                <p className={'text-[0.8rem] leading-5'}>2:55</p>
+                <FiHeart size={22} />
             </div>
 
 
