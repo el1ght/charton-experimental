@@ -1,18 +1,15 @@
 'use client'
 
-import {FaHeart} from "react-icons/fa6";
 import {useRouter} from "next/navigation";
 import {useEffect, useState} from "react";
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import toast from "react-hot-toast";
 
-interface LikeButtonProps {
-    songId: string;
-}
+// interface LikeButtonProps {
+//     songId: string;
+// }
 
-const LikeButton: React.FC<LikeButtonProps> = ({
-    songId
-}) => {
+const LikeButton = () => {
     const router = useRouter();
 
     const [isLiked, setIsLiked] = useState(false);
