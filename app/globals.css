@@ -11,7 +11,7 @@
 /*}*/
 
 .box{
-    padding-bottom: calc(1rem + var(--safe-area-inset-bottom));
+    /*padding-bottom: calc(1rem + var(--safe-area-inset-bottom));*/
     /*padding-bottom: var(--safe-area-inset-bottom);*/
 }
 

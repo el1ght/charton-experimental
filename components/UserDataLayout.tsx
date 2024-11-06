@@ -70,7 +70,7 @@ const UserDataLayout = ({
                     </h2>
                 </div>
 
-                <div className="grid grid-rows-8 grid-cols-5 gap-[.1rem] h-[100vh] box">
+                <div className="grid grid-rows-8 grid-cols-5 gap-[.1rem] h-[100vh] box mb-3">
                     <LikedWidget name={'Liked Songs'} href={'/liked'} />
                     <div className={'relative row-span-2 col-span-3 rounded-3xl overflow-hidden rounded-br-none'}>
                         <div className={"relative group flex items-center h-full bg-cover bg-center bg-[url('../public/images/favBg.jpg')] overflow-hidden hover:saturate-150 transition top-left "}>
@@ -118,7 +118,7 @@ const UserDataLayout = ({
 
             </div>
         ) : (
-            <div className={'h-full p-6 box'}>
+            <div className={'p-6 box'}>
                 Loading...
 
             </div>

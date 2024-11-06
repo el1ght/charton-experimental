@@ -2,8 +2,8 @@
 
 import {Song} from "@/types";
 import Image from "next/image";
-import {FiHeart} from "react-icons/fi";
-import {FaPlay} from "react-icons/fa6";
+import {FaHeart, FaPlay} from "react-icons/fa6";
+import LikeButton from "./LikeButton";
 
 interface SongItemProps {
     data: Song[] | any;
@@ -31,14 +31,16 @@ const SongItem: React.FC<SongItemProps> = ({
                     <div className={'flex flex-col max-w-[100px]'}>
                         <h3 className={' truncate text-[1rem] font-bold'}>{data.title}</h3>
 
-                        <p className={'text-[0.8rem] truncate text-neutral-600'}>{data.author}</p>
+                        <p className={'text-[0.7rem] truncate text-neutral-600'}>{data.author}</p>
                     </div>
                 </div>
             </div>
 
             <div className={'flex flex-row gap-x-4'}>
-                <p className={'text-[0.8rem] leading-5'}>2:55</p>
-                <FiHeart size={22} />
+                <p className={'text-[0.8rem] leading-6'}>2:55</p>
+                <LikeButton />
+                {/*songId={song.id}*/}
+
             </div>
 
 

@@ -7,7 +7,7 @@ interface SearchProps {
     }
 }
 
-
+export const revalidate = 0;
 
 const Search = async () => {
 
