@@ -118,9 +118,8 @@ const UserDataLayout = ({
 
             </div>
         ) : (
-            <div className={'p-6 box'}>
+            <div className={'h-full p-6 box'}>
                 Loading...
-
             </div>
         )
     );

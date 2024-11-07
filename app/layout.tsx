@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Content from "@/components/Content";
 import Script from "next/script";
 import ToasterProvider from "@/providers/ToasterProvider";
+import Player from "@/components/Player";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,6 +40,7 @@ export default function RootLayout({
               </Content>
           </div>
           <Sidebar />
+          <Player />
 
       </body>
     </html>

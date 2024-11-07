@@ -2,6 +2,7 @@
 
 import {Song} from "@/types";
 import SongItem from "@/components/SongItem";
+import useOnPlay from "@/hooks/useOnPlay";
 
 interface LikedContentProps {
     songs: Song[] | any;
@@ -10,6 +11,8 @@ interface LikedContentProps {
 const LikedContent: React.FC<LikedContentProps> = ({
     songs
 }) => {
+    const onPlay = useOnPlay(songs);
+
     if (songs.length === 0) {
         return (
             <div className="mt-2 text-neutral-400">
@@ -23,7 +26,7 @@ const LikedContent: React.FC<LikedContentProps> = ({
                 songs.map((item: any) => (
                     <SongItem
                         key={item.id}
-                        onClick={() => {}}
+                        onClick={(id: string) => onPlay(id)}
                         data={item}
                     />
                 ))

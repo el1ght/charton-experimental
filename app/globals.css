@@ -42,3 +42,7 @@ body,
           conic-gradient(from 90deg at calc(100% - var(--s) - 2*var(--r)) calc(100% - var(--s) - 2*var(--r)),
           #eee0 25%,#eee 0);
 }
+
+.rounded-player{
+    border-radius: 5px 50px 50px 5px;
+}
