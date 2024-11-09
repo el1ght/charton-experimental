@@ -3,6 +3,7 @@
 import {useState, useEffect} from "react";
 import LikedWidget from "@/components/LikedWidget";
 import {FaPlay} from "react-icons/fa6";
+import useWebApp from "@/hooks/useWebApp";
 
 
 interface UserData {
@@ -19,15 +20,16 @@ const UserDataLayout = () => {
     const [telegramId, setTelegramId] = useState<string | null>(null)
     const [userData, setUserData] = useState<UserData | null>(null)
     const [hash, setHash] = useState<string | null>(null);
-    const [WebApp, setWebApp] = useState<any>(null);
+    const WebApp = useWebApp();
+    // const [WebApp, setWebApp] = useState<any>(null);
 
-    const loadWebApp = async () => {
-        return (await import('@twa-dev/sdk')).default
-    };
-
-    useEffect(() => {
-        loadWebApp().then(x => setWebApp(x));
-    }, []);
+    // const loadWebApp = async () => {
+    //     return (await import('@twa-dev/sdk')).default
+    // };
+    //
+    // useEffect(() => {
+    //     loadWebApp().then(x => setWebApp(x));
+    // }, []);
 
     useEffect(() => {
         if (!WebApp) return;
