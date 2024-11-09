@@ -3,7 +3,7 @@
 import {useState, useEffect} from "react";
 import LikedWidget from "@/components/LikedWidget";
 import {FaPlay} from "react-icons/fa6";
-import {useRouter} from "next/router";
+
 
 interface UserData {
     id: number;
@@ -15,8 +15,7 @@ interface UserData {
     photo_url?: string;
 }
 
-const UserDataLayout = ({
-                  }) => {
+const UserDataLayout = () => {
     const [telegramId, setTelegramId] = useState<string | null>(null)
     const [userData, setUserData] = useState<UserData | null>(null)
     const [hash, setHash] = useState<string | null>(null);
@@ -35,6 +34,8 @@ const UserDataLayout = ({
 
         WebApp.ready();
         WebApp.expand();
+
+
 
         const initDataString = WebApp.initData;
 
@@ -63,7 +64,7 @@ const UserDataLayout = ({
             <div className={'p-6 box'}>
                 <div className="mb-3">
                     <h1 className="text-[#585858] text-[0.8rem]">
-                        Welcome Home
+                        {WebApp.platform}
                     </h1>
                     <h2 className="text-black text-lg font-semibold">
                         {userData.first_name}, you may like this
