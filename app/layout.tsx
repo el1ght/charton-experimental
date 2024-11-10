@@ -34,10 +34,10 @@ export default function RootLayout({
       >
           <div className={'h-full flex flex-col gap-[2px] p-0.5 box'}>
               <ToasterProvider />
-              <Header />
               <Content>
                   {children}
               </Content>
+              <Header />
           </div>
           <Sidebar />
           <Player />

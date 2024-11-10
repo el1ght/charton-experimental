@@ -20,7 +20,7 @@ const mockSongs = [
 
 export const revalidate = 0;
 
-const Liked = async () => {
+const Liked = () => {
     return (
         <div className={'px-3 py-5 box flex flex-col gap-y-4'}>
             <div className={'flex justify-center items-center flex-col gap-y-1'}>

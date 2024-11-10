@@ -1,8 +1,5 @@
-'use client'
-
-import React from "react";
+import React from "react"
 import Footer from "./Footer";
-import useWebApp from "@/hooks/useWebApp";
 
 interface ContentProps {
     children: React.ReactNode;
@@ -13,7 +10,7 @@ const Content: React.FC<ContentProps> = ({
 }) => {
 
     return (
-        <main className={`mb-4 h-full rounded-[60px] overflow-y-auto shadow-inner bg-[#ededed] border border-[#c9c9c9] box main`}>
+        <main className={`h-full rounded-[60px] overflow-y-auto shadow-inner bg-[#ededed] border border-[#c9c9c9] box main`}>
             {children}
             <Footer />
         </main>

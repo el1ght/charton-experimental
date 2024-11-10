@@ -9,7 +9,7 @@ interface SearchProps {
 
 export const revalidate = 0;
 
-const Search = async () => {
+const Search = () => {
 
     return (
         <div className={'py-6 p-3 h-full'}>
