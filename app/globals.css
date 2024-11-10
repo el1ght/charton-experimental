@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root{
-    --safe-area-bottom: calc(100vh - var(--tg-viewport-stable-height,100vh))
+    --safe-area-bottom: calc(100vh - var(--tg-viewport-stable-height, 100vh))
 }
 
 /*.footer{*/
@@ -45,4 +45,8 @@ body,
 
 .rounded-player{
     border-radius: 5px 75px 75px 5px;
+}
+
+.main {
+    padding-bottom: calc(1rem + var(--safe-area-inset-bottom));
 }

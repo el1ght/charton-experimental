@@ -8,6 +8,7 @@ import {TfiLoop} from "react-icons/tfi";
 import {FaRandom} from "react-icons/fa";
 import {PiShuffleBold} from "react-icons/pi";
 import {TbRepeat} from "react-icons/tb";
+import {FaVolumeHigh} from "react-icons/fa6";
 
 interface PlayerContentProps {
     song: Song;
@@ -22,22 +23,30 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
 
     return (
         <>
-            <div className={'w-full bg-[#424242]/[.55] backdrop-blur-md p-3 rounded-full flex justify-center items-center border border-[#c9c9c9]/[.35] gap-x-2 shadow-xl'}>
-                    <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>
-                        <TbRepeat size={16} />
+            <div className={'w-full bg-[#424242]/[.55] backdrop-blur-md p-1 rounded-full flex justify-between items-center border border-[#c9c9c9]/[.35] gap-x-2 shadow-xl'}>
+                    <div>
+                        <Image className={'w-[50px] h-[50px] rounded-full'} src={'/images/favBg-5.jpg'} alt={'image'} width={30} height={30} />
                     </div>
-                    <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>
-                        <IoPlaySkipBack size={16} />
+                    {/*<div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>*/}
+                    {/*    <TbRepeat size={16} />*/}
+                    {/*</div>*/}
+                    <div className={'flex items-center gap-x-1'}>
+                        <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-2'}>
+                            <IoPlaySkipBack size={12} />
+                        </div>
+                        <div className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] transition shadow-xl hover:bg-white rounded-full p-4'}>
+                            <Icon size={16} />
+                        </div>
+                        <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-2'}>
+                            <IoPlaySkipForward size={12} />
+                        </div>
                     </div>
-                    <div className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] transition shadow-xl hover:bg-white rounded-full p-5'}>
-                        <Icon size={20} />
+                    <div className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] shadow-xl rounded-full p-4'}>
+                        <FaVolumeHigh size={18} />
                     </div>
-                    <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>
-                        <IoPlaySkipForward size={16} />
-                    </div>
-                    <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>
-                        <PiShuffleBold size={16} />
-                    </div>
+                    {/*<div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>*/}
+                    {/*    <PiShuffleBold size={16} />*/}
+                    {/*</div>*/}
             </div>
             {/*<div className={'w-[150px] h-[150px] rounded-full border border-[#c9c9c9]/[.35] z-10 relative p-1'}>*/}
             {/*    <Image src={'/images/favBg-5.jpg'} alt={'image'} width={50} height={50} className={'h-full w-full rounded-full z-1'} />*/}
