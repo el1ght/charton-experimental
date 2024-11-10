@@ -29,7 +29,7 @@ const Sidebar = () => {
     ], [pathname])
 
     return (
-            <div className="absolute right-1 bottom-[115px] p-1 bg-[#424242]/[.55] backdrop-blur-md rounded-full shadow-xl z-10 border border-[#c9c9c9]/[.35]">
+            <div className="absolute right-1 bottom-[130px] p-1 bg-[#424242]/[.55] backdrop-blur-md rounded-full shadow-xl z-10 border border-[#c9c9c9]/[.35]">
                 <div className="flex flex-col gap-y-1.5">
                     {
                         routes.map((item) => (

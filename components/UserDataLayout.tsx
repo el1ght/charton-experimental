@@ -66,7 +66,7 @@ const UserDataLayout = () => {
             <div className={'p-6 box'}>
                 <div className="mb-3">
                     <h1 className="text-[#585858] text-[0.8rem]">
-                        <span className={`${WebApp.platform === 'ios' && 'text-red-700'}`}>HEY, {WebApp.platform}</span>
+                        Welcome Home
                     </h1>
                     <h2 className="text-black text-lg font-semibold">
                         {userData.first_name}, you may like this
