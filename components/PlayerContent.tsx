@@ -23,31 +23,31 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
 
     return (
         <>
-            <div className={'w-full bg-[#424242]/[.55] shadow backdrop-blur-md px-6 py-1 rounded-[30px] flex justify-between items-center border border-[#c9c9c9] gap-x-2'}>
-                    <div>
-                        <Image className={'w-[50px] h-[50px] rounded-full'} src={'/images/favBg-5.jpg'} alt={'image'} width={30} height={30} />
-                    </div>
+            <div className={'w-full bg-[#424242]/[.55] shadow backdrop-blur-md p-2 rounded-[30px] border border-[#c9c9c9]'}>
                     {/*<div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>*/}
                     {/*    <TbRepeat size={16} />*/}
                     {/*</div>*/}
-                    <div className={'flex flex-col items-center'}>
-                        <p className={'text-[12px]   text-white text-center'}>Off To The Races</p>
-                        <div className={'w-[150px] h-[1px] bg-white my-1'}></div>
-                        <p className={'text-neutral-400 text-[10px] block mb-2'}>Lana Del Rey</p>
-                        <div className={'flex flex-row items-center gap-x-2'}>
-                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-4'}>
+                    <div className={'flex items-center justify-between gap-x-2'}>
+                        <div className={'flex gap-x-2 items-center'}>
+                            <Image src={'/images/favBg-1.jpg'} alt={'image'} width={30} height={30} className={'w-[50px] h-[50px] rounded-full'} />
+                            <div className={'text-center'}>
+                                <p className={'text-[12px]   text-white text-center'}>Off To The Races</p>
+                                <div className={'w-[100px] h-[1px] bg-white my-1'}></div>
+                                <p className={'text-[#ddd] text-[10px] block'}>Lana Del Rey</p>
+                            </div>
+                        </div>
+
+                        <div className={'flex flex-row items-center gap-x-1'}>
+                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>
                                 <IoPlaySkipBack size={16} />
                             </div>
                             <div className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] transition shadow-xl hover:bg-white rounded-full p-4'}>
                                 <Icon size={16} />
                             </div>
-                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-4'}>
+                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>
                                 <IoPlaySkipForward size={16} />
                             </div>
                         </div>
-                    </div>
-                    <div className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] shadow-xl rounded-full p-4'}>
-                        <FaVolumeHigh size={18} />
                     </div>
                     {/*<div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>*/}
                     {/*    <PiShuffleBold size={16} />*/}

@@ -3,7 +3,7 @@
 import logo from "@/public/images/logo.svg";
 import {usePathname} from "next/navigation";
 import Link from "next/link";
-import {IoPerson, IoSearch} from "react-icons/io5";
+import {IoPerson, IoPersonAdd, IoSearch} from "react-icons/io5";
 import Image from "next/image";
 import {FaHeart} from "react-icons/fa6";
 import {PiPlaylistBold} from "react-icons/pi";
@@ -26,7 +26,7 @@ const Header = () => {
                 </Link>
 
                 <Link href={'/liked'} className={`flex p-6 rounded-full bg-[#fff8f2]/[.5] justify-center items-center transition hover:bg-[#fff]/[100] shadow-md ${pathname === '/liked' && 'bg-white'}`}>
-                    <FaHeart className={'text-black'} size={20} />
+                    <IoPersonAdd className={'text-black'} size={20} />
                 </Link>
                 <Link href={'/search'} className={`flex p-6 rounded-full bg-[#fff8f2]/[.5] justify-center items-center transition hover:bg-[#fff]/[100] shadow-md ${pathname === '/search' && 'bg-white'}`}>
                     <IoSearch className={'text-black'} size={20} />
