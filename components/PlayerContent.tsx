@@ -23,7 +23,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
 
     return (
         <>
-            <div className={'w-full bg-[#424242]/[.55] backdrop-blur-md px-4 py-1 rounded-full flex justify-between items-center border border-[#c9c9c9]/[.35] gap-x-2 shadow-xl'}>
+            <div className={'w-full bg-[#424242]/[.55] backdrop-blur-md px-6 py-1 rounded-[30px] flex justify-between items-center border border-[#c9c9c9]/[.35] gap-x-2'}>
                     <div>
                         <Image className={'w-[50px] h-[50px] rounded-full'} src={'/images/favBg-5.jpg'} alt={'image'} width={30} height={30} />
                     </div>
