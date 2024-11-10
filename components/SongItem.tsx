@@ -19,7 +19,7 @@ const SongItem: React.FC<SongItemProps> = ({
 
         <div
             onClick={() => onClick(data.id)}
-            className={'p-4 overflow-hidden flex items-center justify-between gap-x-4 rounded-xl cursor-pointer bg-[#D9D9D9]/[.8] hover:bg-[#D9D9D9] transition'}
+            className={'p-4 overflow-hidden flex items-center justify-between gap-x-4 rounded-xl cursor-pointer bg-[#B9B9B9]/[.8] hover:bg-[#D9D9D9] transition'}
         >
             <div className={'flex flex-row items-center gap-x-4'}>
                 <div>

@@ -10,9 +10,8 @@ const Content: React.FC<ContentProps> = ({
 }) => {
 
     return (
-        <main className={`h-full rounded-[30px] overflow-y-auto shadow-inner bg-[#ededed] border border-[#c9c9c9] box main`}>
+        <main className={`h-full rounded-[30px] overflow-y-auto shadow-inner bg-[#8C8C8C]/[.5] border border-[#c9c9c9] box main`}>
             {children}
-            <Footer />
         </main>
     );
 };

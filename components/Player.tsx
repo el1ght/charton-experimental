@@ -20,7 +20,7 @@ const Player = () => {
     // }
 
     return (
-        <div className={'absolute right-0 bottom-[81px] left-0 flex justify-between m-0.5'}>
+        <div className={'absolute right-0 bottom-[88px] left-0 flex justify-between m-0.5'}>
 
             <PlayerContent
                 key={songUrl}

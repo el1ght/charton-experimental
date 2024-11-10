@@ -16,7 +16,11 @@
 }
 
 body{
-  background: radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 255, 255) 0%, rgba(169, 169, 169) 100%) !important;
+  /*background: radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 255, 255) 0%, rgba(169, 169, 169) 100%) !important;*/
+    background-image: url('/images/app-bg.jpg') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   color: #000 !important;
   overflow: hidden !important;
 }
