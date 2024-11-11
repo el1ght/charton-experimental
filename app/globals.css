@@ -2,8 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+#logo{
+    fill: white;
+    color: white;
+}
+
 :root{
     --safe-area-bottom: calc(100vh - var(--tg-viewport-stable-height, 100vh))
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+*{
+    scrollbar-width: none;
+}
+
+*{
+    -ms-overflow-style: none;
 }
 
 /*.footer{*/
@@ -16,9 +33,61 @@
 }
 
 body{
-  background: radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 255, 255) 0%, rgb(157, 157, 157) 100%) !important;
-  color: #000 !important;
+  /*background: radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 255, 255) 0%, rgb(157, 157, 157) 100%) !important;*/
+    background-color: var(--tg-theme-secondary-bg-color);
+    color: var(--tg-theme-text-color);
+  /*color: #000 !important;*/
   overflow: hidden !important;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+.text-section-color{
+    color: var(--tg-theme-text-color);
+}
+
+.subtitle-color{
+    color: var(--tg-theme-subtitle-text-color);
+}
+
+.main-bg-color{
+    background-color: var(--tg-theme-section-bg-color);
+}
+
+.section-bg{
+    background-color: var(--tg-theme-secondary-bg-color);
+    border-color: var(--tg-theme-subtitle-text-color);;
+    color: var(--tg-theme-text-color);
+}
+
+.main-text-color{
+    color: var(--tg-theme-text-color);
+}
+
+.button-color{
+    background-color: var(--tg-theme-button-color);
+}
+
+.link-color{
+    background-color: var(--tg-theme-link-color);
+    color: var(--tg-theme-hint-color);
+}
+
+.accent-text{
+    color: var(--tg-theme-accent-text-color);
+}
+
+.button-main{
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+}
+
+.button-main-text{
+    color: var(--tg-theme-button-text-color);
+}
+
+.section-header-text-color{
+    background-color: var(--tg-theme-section-header-text-color);
 }
 
 html,
@@ -49,4 +118,39 @@ body,
 
 .main {
     padding-bottom: calc(1rem + var(--safe-area-inset-bottom));
+}
+
+@keyframes shine {
+    0%,
+    80%{
+        transform: translateX(-100%);
+
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(500%);
+        opacity: 0;
+    }
+}
+
+.shine-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-effect::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(to right,
+        transparent 0%,
+    rgb(255, 255, 255, 0.5) 50%,
+        transparent 100%
+    );
+    animation: shine 8s infinite;
 }
