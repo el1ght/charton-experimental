@@ -25,7 +25,7 @@ const Header = () => {
                     <Image src={logo} alt={"Logo"} width={30} height={30} />
                 </Link>
 
-                <Link href={'/liked'} className={`flex p-6 rounded-full bg-[#fff8f2]/[.5] justify-center items-center transition hover:bg-[#fff]/[100] shadow-md ${pathname === '/liked' && 'bg-white'}`}>
+                <Link href={'/friends'} className={`flex p-6 rounded-full bg-[#fff8f2]/[.5] justify-center items-center transition hover:bg-[#fff]/[100] shadow-md ${pathname === '/friends' && 'bg-white'}`}>
                     <IoPersonAdd className={'text-black'} size={20} />
                 </Link>
                 <Link href={'/search'} className={`flex p-6 rounded-full bg-[#fff8f2]/[.5] justify-center items-center transition hover:bg-[#fff]/[100] shadow-md ${pathname === '/search' && 'bg-white'}`}>

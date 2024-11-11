@@ -2,7 +2,7 @@
 
 import {Song} from "@/types";
 import Image from "next/image";
-import {FaHeart, FaPlay} from "react-icons/fa6";
+import {FaPlay} from "react-icons/fa6";
 import LikeButton from "./LikeButton";
 
 interface SongItemProps {
@@ -17,11 +17,8 @@ const SongItem: React.FC<SongItemProps> = ({
     return (
         // const imagePath = useLoadImage(data);
 
-        <div
-            onClick={() => onClick(data.id)}
-            className={'p-4 overflow-hidden flex items-center justify-between gap-x-4 rounded-xl cursor-pointer bg-[#B9B9B9]/[.8] hover:bg-[#D9D9D9] transition'}
-        >
-            <div className={'flex flex-row items-center gap-x-4'}>
+        <div className={'p-4 overflow-hidden flex items-center justify-between gap-x-4 rounded-xl cursor-pointer bg-[#B9B9B9]/[.5] active:bg-[#B9B9B9] transition'}>
+            <div onClick={() => onClick(data.id)} className={'flex flex-row items-center gap-x-4 h-full'}>
                 <div>
                     {/*<Image src={'/images/play.svg'} alt={'play'} width={30} height={30}/>*/}
                     <FaPlay className={'ml-1'} />
