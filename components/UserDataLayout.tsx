@@ -21,23 +21,12 @@ const UserDataLayout = () => {
     const [userData, setUserData] = useState<UserData | null>(null)
     const [hash, setHash] = useState<string | null>(null);
     const WebApp = useWebApp();
-    // const [WebApp, setWebApp] = useState<any>(null);
-
-    // const loadWebApp = async () => {
-    //     return (await import('@twa-dev/sdk')).default
-    // };
-    //
-    // useEffect(() => {
-    //     loadWebApp().then(x => setWebApp(x));
-    // }, []);
 
     useEffect(() => {
         if (!WebApp) return;
 
         WebApp.ready();
         WebApp.expand();
-
-
 
         const initDataString = WebApp.initData;
 

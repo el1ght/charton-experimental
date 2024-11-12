@@ -1,11 +1,11 @@
 import Image from "next/image";
-import {FiPlay} from "react-icons/fi";
 import {FaPlay} from "react-icons/fa6";
 import Link from "next/link";
 
 export const revalidate = 0;
 
 const Liked = () => {
+
     return (
         <div className={'px-3 py-5 box flex flex-col gap-y-0.5'}>
             <div className={'flex justify-center items-center flex-col gap-y-1'}>
