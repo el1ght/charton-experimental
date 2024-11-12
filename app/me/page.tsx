@@ -5,10 +5,14 @@ export const revalidate = 0;
 const Liked = () => {
     return (
         <div className={'px-3 py-5 box flex flex-col gap-y-4'}>
-            <div className={'flex justify-center items-center flex-col gap-y-1'}>
-                <div className={'p-1.5 border-2 border-[#ddd] bg-[#424242]/[.3] rounded-3xl'}>
-                    <Image className={'w-[100px] h-[100px] rounded-3xl'} src={'/images/favBg-4.jpg'} alt={'image'} width={50} height={50} />
-                </div>
+            <div className={'flex justify-center items-center flex-col'}>
+                <lord-icon
+                    src="https://cdn.lordicon.com/xcxzayqr.json"
+                    trigger="in"
+                    delay="2000"
+                    colors="primary:#545454,secondary:#848484"
+                    className={'w-[150px] h-[150px]'}>
+                </lord-icon>
 
                 <h2 className={'text-center text-[1.2rem] font-bold'}>Me</h2>
             </div>

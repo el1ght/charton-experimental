@@ -4,6 +4,8 @@ import {useState, useEffect} from "react";
 import LikedWidget from "@/components/LikedWidget";
 import {FaPlay} from "react-icons/fa6";
 import useWebApp from "@/hooks/useWebApp";
+import Image from "next/image";
+import {render} from "react-dom";
 
 
 interface UserData {
@@ -50,9 +52,22 @@ const UserDataLayout = () => {
 
     //Check if from Telegram
 
+
     return (
         userData ? (
-            <div className={'p-6 box'}>
+            <div className={'p-5 box'}>
+                <div className={'flex justify-center items-center flex-col'}>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/heexevev.json"
+                        trigger="in"
+                        delay="2000"
+                        colors="primary:#9cc2f4,secondary:#000000,tertiary:#000000,quaternary:#ffffff,quinary:#000000,senary:#e4e4e4"
+                        className={'w-[150px] h-[150px]'}>
+                    </lord-icon>
+
+                    <h2 className={'text-center text-[1.2rem] font-bold mb-4'}>Home</h2>
+                </div>
+
                 <div className="mb-3">
                     <h1 className="text-[#585858] text-[0.8rem]">
                         Welcome Home
@@ -110,7 +125,7 @@ const UserDataLayout = () => {
 
             </div>
         ) : (
-            <div className={'h-full p-6 box'}>
+            <div className={'h-full p-5 box'}>
                 Loading...
             </div>
         )
