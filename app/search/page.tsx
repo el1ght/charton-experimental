@@ -9,6 +9,14 @@ interface SearchProps {
 
 export const revalidate = 0;
 
+declare global {
+    namespace JSX {
+        interface IntrinsicElements {
+            'lord-icon': { src: string; trigger: string; delay: string; colors: string; className: string; }
+        }
+    }
+}
+
 const Search = () => {
 
     return (

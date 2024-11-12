@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lordicon/react": "^1.10.1",
     "@twa-dev/sdk": "^7.10.1",
     "next": "15.0.1",
     "query-string": "^9.1.1",

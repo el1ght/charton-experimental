@@ -4,8 +4,14 @@ import {useState, useEffect} from "react";
 import LikedWidget from "@/components/LikedWidget";
 import {FaPlay} from "react-icons/fa6";
 import useWebApp from "@/hooks/useWebApp";
-import Image from "next/image";
-import {render} from "react-dom";
+
+declare global {
+    namespace JSX {
+        interface IntrinsicElements {
+            'lord-icon': { src: string; trigger: string; delay: string; colors: string; className: string; }
+        }
+    }
+}
 
 
 interface UserData {

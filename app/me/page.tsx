@@ -2,6 +2,14 @@ import Image from "next/image";
 
 export const revalidate = 0;
 
+declare global {
+    namespace JSX {
+        interface IntrinsicElements {
+            'lord-icon': { src: string; trigger: string; delay: string; colors: string; className: string; }
+        }
+    }
+}
+
 const Liked = () => {
     return (
         <div className={'px-3 py-5 box flex flex-col gap-y-4'}>
