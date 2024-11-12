@@ -66,7 +66,7 @@ const UserDataLayout = () => {
                     <lord-icon
                         src="https://cdn.lordicon.com/heexevev.json"
                         trigger="in"
-                        delay="2000"
+                        delay="100"
                         colors="primary:#9cc2f4,secondary:#000000,tertiary:#000000,quaternary:#ffffff,quinary:#000000,senary:#e4e4e4"
                         className={'w-[150px] h-[150px]'}>
                     </lord-icon>

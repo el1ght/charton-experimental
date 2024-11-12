@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
-import Header from "@/components/Header";
+import NavigationBar from "@/components/NavigationBar";
 import Content from "@/components/Content";
 import Script from "next/script";
 import ToasterProvider from "@/providers/ToasterProvider";
@@ -38,7 +38,7 @@ export default function RootLayout({
               <Content>
                   {children}
               </Content>
-              <Header />
+              <NavigationBar />
           </div>
           <Sidebar />
           <Player />

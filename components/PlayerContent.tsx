@@ -22,29 +22,27 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
     const Icon = true ? BsPauseFill : BsPlayFill;
 
     return (
-        <>
-            <div className={'w-full bg-[#424242]/[.55] shadow backdrop-blur-md p-2 rounded-[30px] border border-[#c9c9c9]'}>
+        <div className={'overflow-hidden w-full'}>
+            <div className={'relative w-full bg-[#424242]/[.55] shadow backdrop-blur-md p-1 rounded-b-[30px] border border-[#c9c9c9] overflow-hidden'}>
+                <div className={'absolute top-0 left-0 right-0 w-full h-[2px] bg-white'}></div>
+                <div className={'absolute top-0 left-0 right-0 w-[100px] h-[2px] bg-neutral-600'}></div>
                     {/*<div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>*/}
                     {/*    <TbRepeat size={16} />*/}
                     {/*</div>*/}
                     <div className={'flex items-center justify-between gap-x-2'}>
                         <div className={'flex gap-x-2 items-center'}>
-                            <Image src={'/images/favBg-1.jpg'} alt={'image'} width={30} height={30} className={'w-[50px] h-[50px] rounded-full'} />
-                            <div className={'text-center'}>
-                                <p className={'text-[12px]   text-white text-center'}>Off To The Races</p>
-                                <div className={'w-[100px] h-[1px] bg-white my-1'}></div>
-                                <p className={'text-[#ddd] text-[10px] block'}>Lana Del Rey</p>
+                            <Image src={'/images/favBg-1.jpg'} alt={'image'} width={30} height={30} className={'w-[65px] h-[65px] rounded-full'} />
+                            <div className={''}>
+                                <p className={'text-[15px] truncate text-white text-center'}>Off To The Races</p>
+                                <p className={'text-[#ddd] truncate text-[12px] block'}>Lana Del Rey</p>
                             </div>
                         </div>
 
-                        <div className={'flex flex-row items-center gap-x-1'}>
-                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center transition active:bg-white rounded-full cursor-pointer p-4'}>
-                                <IoPlaySkipBack size={16} />
-                            </div>
-                            <div className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] shadow-xl transition active:bg-white rounded-full p-4'}>
+                        <div className={'flex flex-row items-center gap-x-1 bg-[#8C8C8C]/[.50] backdrop-blur-md rounded-full p-1'}>
+                            <div className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] shadow-xl transition active:bg-white rounded-full p-5'}>
                                 <Icon size={16} />
                             </div>
-                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center transition active:bg-white rounded-full cursor-pointer p-4'}>
+                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center transition active:bg-white rounded-full cursor-pointer p-5'}>
                                 <IoPlaySkipForward size={16} />
                             </div>
                         </div>
@@ -80,7 +78,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
             {/*        <p className={'text-[10px] text-[#FFFFFF] truncate max-w-[150px]'}>Lana Del Rey <span className={'text-[#333333]'}>Off To The Races</span></p>*/}
             {/*    </div>*/}
             {/*</div>*/}
-        </>
+        </div>
     );
 };
 

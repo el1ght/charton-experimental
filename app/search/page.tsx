@@ -25,7 +25,7 @@ const Search = () => {
                 <lord-icon
                     src="https://cdn.lordicon.com/xwvkumdr.json"
                     trigger="in"
-                    delay="2000"
+                    delay="100"
                     colors="primary:#b4b4b4,secondary:#e4e4e4,tertiary:#000000"
                     className={'w-[150px] h-[150px]'}>
                 </lord-icon>

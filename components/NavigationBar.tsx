@@ -8,7 +8,7 @@ import Image from "next/image";
 import {FaHeart} from "react-icons/fa6";
 import {PiPlaylistBold} from "react-icons/pi";
 
-const Header = () => {
+const NavigationBar = () => {
     const pathname = usePathname();
 
     return (
@@ -36,4 +36,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default NavigationBar;

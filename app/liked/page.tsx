@@ -35,7 +35,7 @@ const Liked = () => {
                 <lord-icon
                     src="https://cdn.lordicon.com/zjhryiyb.json"
                     trigger="in"
-                    delay="2000"
+                    delay="100"
                     colors="primary:#242424,secondary:#ffffff,tertiary:#000000,quaternary:#848484,quinary:#b4b4b4"
                     className={'w-[150px] h-[150px]'}>
                 </lord-icon>
