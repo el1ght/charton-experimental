@@ -33,15 +33,10 @@
 }
 
 body{
-<<<<<<< HEAD
   /*background: radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 255, 255) 0%, rgb(157, 157, 157) 100%) !important;*/
     background-color: var(--tg-theme-secondary-bg-color);
     color: var(--tg-theme-text-color);
   /*color: #000 !important;*/
-=======
-  background: radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 255, 255) 0%, rgba(169, 169, 169) 100%) !important;
-  color: #000 !important;
->>>>>>> parent of fc0dd5b (stable)
   overflow: hidden !important;
     -webkit-overflow-scrolling: touch;
 

@@ -38,13 +38,13 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
                         </div>
 
                         <div className={'flex flex-row items-center gap-x-1'}>
-                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>
+                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center transition active:bg-white rounded-full cursor-pointer p-4'}>
                                 <IoPlaySkipBack size={16} />
                             </div>
-                            <div className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] transition shadow-xl hover:bg-white rounded-full p-4'}>
+                            <div className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] shadow-xl transition active:bg-white rounded-full p-4'}>
                                 <Icon size={16} />
                             </div>
-                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>
+                            <div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center transition active:bg-white rounded-full cursor-pointer p-4'}>
                                 <IoPlaySkipForward size={16} />
                             </div>
                         </div>
