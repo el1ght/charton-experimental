@@ -63,12 +63,12 @@ const UserDataLayout = () => {
 
     return (
         userData ? (
-            <div className={'p-6 box text-section-color'}>
+            <div className={'p-6 box'}>
                 <div className="mb-3">
-                    <h1 className="text-[0.8rem] subtitle-color">
+                    <h1 className="text-[#585858] text-[0.8rem]">
                         Welcome Home
                     </h1>
-                    <h2 className="main-text-color text-lg font-semibold">
+                    <h2 className="text-black text-lg font-semibold">
                         {userData.first_name}, you may like this
                     </h2>
                 </div>
@@ -83,7 +83,7 @@ const UserDataLayout = () => {
                             </div>
                         </div>
                         <div className={'absolute right-[10px] bottom-[10px] rounded-full'}>
-                            <FaPlay size={16} className={'main-text-color'} />
+                            <FaPlay size={16} className={'text-black'} />
                         </div>
                     </div>
                     <div className={'relative row-span-6 col-span-2 rounded-3xl overflow-hidden'}>
@@ -103,7 +103,7 @@ const UserDataLayout = () => {
                             </div>
                         </div>
                         <div className={'absolute right-[10px] bottom-[10px] rounded-full'}>
-                            <FaPlay size={16} className={'main-text-color'} />
+                            <FaPlay size={16} className={'text-black'} />
                         </div>
                     </div>
                     <div className={'relative row-span-2 col-span-3 rounded-3xl overflow-hidden rounded-br-none'}>
@@ -114,7 +114,7 @@ const UserDataLayout = () => {
                             </div>
                         </div>
                         <div className={'absolute right-[10px] bottom-[10px] rounded-full'}>
-                            <FaPlay size={16} className={'main-text-color'} />
+                            <FaPlay size={16} className={'text-black'} />
                         </div>
                     </div>
                 </div>
