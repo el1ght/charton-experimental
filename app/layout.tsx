@@ -39,7 +39,6 @@ export default function RootLayout({
               </Content>
               <NavigationBar />
           </div>
-          <Sidebar />
           <Player />
 
       </body>

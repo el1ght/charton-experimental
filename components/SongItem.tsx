@@ -17,8 +17,8 @@ const SongItem: React.FC<SongItemProps> = ({
     return (
         // const imagePath = useLoadImage(data);
 
-        <div className={'p-4 overflow-hidden flex items-center justify-between gap-x-4 rounded-xl cursor-pointer bg-[#B9B9B9]/[.5] active:bg-[#B9B9B9] transition'}>
-            <div onClick={() => onClick(data.id)} className={'flex flex-row items-center gap-x-4 h-full'}>
+        <div className={'p-4 overflow-hidden flex items-center justify-between gap-x-4 rounded-xl cursor-pointer bg-[#B9B9B9]/[.4] active:bg-[#B9B9B9] transition'}>
+            <div onClick={() => onClick(data.id)} className={'flex flex-row items-center gap-x-4 h-full w-full'}>
                 <div>
                     {/*<Image src={'/images/play.svg'} alt={'play'} width={30} height={30}/>*/}
                     <FaPlay className={'ml-1'} />

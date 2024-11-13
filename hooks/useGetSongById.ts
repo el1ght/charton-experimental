@@ -13,7 +13,14 @@ const useGetSongById = (id?: string) => {
 
         setIsLoading(true);
 
-        const fetchSong = async () => {
+        const fetchSong = () => {
+            const data = {
+                id: '1',
+                user_id: 'el1ght',
+                author: 'Ponomaryov',
+                title: 'Ukraine',
+                image_path: 'vevdkvfbdnb',
+            }
             // fetch from db
             // const {data, error} = await
             // if (error) {
@@ -21,8 +28,8 @@ const useGetSongById = (id?: string) => {
             //     return toast.error(error.message);
             // }
             //
-            // setSong(data as Song)
-            // setIsLoading(false);
+            setSong(data as Song)
+            setIsLoading(false);
         }
 
         fetchSong();

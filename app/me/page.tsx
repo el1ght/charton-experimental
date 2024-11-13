@@ -9,8 +9,8 @@ const Liked = () => {
 
     return (
         <div className={'relative px-3 py-5 box flex flex-col gap-y-4'}>
-            <button className={'p-6 bg-[#424242]/[.3] transition active:bg-[#fff]/[100] shadow-md flex justify-center items-center absolute right-4 top-5 rounded-full'}>
-                <Icon size={20} />
+            <button className={'p-4 bg-[#424242]/[.3] transition active:bg-[#fff]/[100] shadow-md flex justify-center items-center absolute right-4 top-4 rounded-full'}>
+                <Icon size={16} />
             </button>
             <div className={'flex flex-col justify-center items-center gap-y-1'}>
                 <div className={'p-1.5 border-2 border-[#ddd] bg-[#424242]/[.3] rounded-3xl'}>

@@ -16,12 +16,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
             className={twMerge(`
                 flex
                 w-full
-                rounded-md
-                bg-[#8C8C8C]
+                p-3 
+                bg-[#424242]/[.4] 
+                rounded-xl 
+                text-[#424242]
                 border
                 border-transparent
-                px-3
-                py-3
                 text-sm
                 file:border-0
                 placeholder:text-[#5B5B5B]

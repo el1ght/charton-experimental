@@ -11,13 +11,12 @@ const Player = () => {
 
     const songUrl = useLoadSongUrl(song!);
 
-    if (!player.activeId) {
-        return null
-    }
-
-    // if(!song || !songUrl || !player.activeId) {
-    //     return null;
+    // if (!song) {
+    //     return null
     // }
+    if(!song || !songUrl || !player.activeId) {
+        return null;
+    }
 
     return (
         <div className={'absolute right-[1px] bottom-[89px] left-[1px] flex justify-between m-0.5 overflow-hidden'}>
@@ -25,7 +24,7 @@ const Player = () => {
             <PlayerContent
                 key={songUrl}
                 song={song!}
-                songUrl={songUrl!}
+                songUrl={songUrl}
             />
 
         </div>

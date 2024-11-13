@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import toast from "react-hot-toast";
+import {FiClipboard} from "react-icons/fi";
 
 const Liked = () => {
 
@@ -22,8 +23,9 @@ const Liked = () => {
                 <h2 className={'text-center text-[1.2rem] font-bold'}>Friends</h2>
             </div>
 
-            <div className={'w-full p-3 bg-neutral-400 rounded-xl text-[#424242]'} onClick={copylink}>
+            <div className={'relative w-full p-3 bg-[#424242]/[.4] rounded-xl text-[#424242] text-[14px] truncate group overflow-hidden transition'} onClick={copylink}>
                 https://acing.music.ton/referral?7777777
+                <FiClipboard size={20} className={'absolute opacity-100 right-2 top-[50%] translate-y-[-50%] group-active:opacity-0 transition'} />
             </div>
         </div>
     );
