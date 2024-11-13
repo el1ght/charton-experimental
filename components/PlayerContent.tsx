@@ -23,7 +23,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
 
     return (
         <div className={'overflow-hidden w-full'}>
-            <div className={'relative w-full bg-[#424242]/[.55] shadow backdrop-blur-md p-1 rounded-b-[30px] border border-[#c9c9c9] overflow-hidden'}>
+            <div className={'relative w-full bg-[#424242]/[.5] shadow backdrop-blur-md p-1 rounded-b-[30px] border-t-0 overflow-hidden'}>
                 <div className={'absolute top-0 left-0 right-0 w-full h-[2px] bg-white'}></div>
                 <div className={'absolute top-0 left-0 right-0 w-[100px] h-[2px] bg-neutral-600'}></div>
                     {/*<div onClick={() => {}} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center rounded-full cursor-pointer p-3'}>*/}
@@ -38,7 +38,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
                             </div>
                         </div>
 
-                        <div className={'flex flex-row items-center gap-x-1 bg-[#8C8C8C]/[.50] backdrop-blur-md rounded-full p-1'}>
+                        <div className={'flex flex-row items-center gap-x-1 bg-[#8с8с8с]/[.50] backdrop-blur-md rounded-full p-1'}>
                             <div className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] shadow-xl transition active:bg-white rounded-full p-5'}>
                                 <Icon size={16} />
                             </div>

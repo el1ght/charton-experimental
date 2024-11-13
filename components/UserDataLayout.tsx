@@ -4,15 +4,7 @@ import {useState, useEffect} from "react";
 import LikedWidget from "@/components/LikedWidget";
 import {FaPlay} from "react-icons/fa6";
 import useWebApp from "@/hooks/useWebApp";
-
-declare global {
-    namespace JSX {
-        interface IntrinsicElements {
-            'lord-icon': { src: string; trigger: string; delay: string; colors: string; className: string; }
-        }
-    }
-}
-
+import Image from "next/image";
 
 interface UserData {
     id: number;
@@ -62,14 +54,10 @@ const UserDataLayout = () => {
     return (
         userData ? (
             <div className={'p-5 box'}>
-                <div className={'flex justify-center items-center flex-col'}>
-                    <lord-icon
-                        src="https://cdn.lordicon.com/heexevev.json"
-                        trigger="in"
-                        delay="100"
-                        colors="primary:#9cc2f4,secondary:#000000,tertiary:#000000,quaternary:#ffffff,quinary:#000000,senary:#e4e4e4"
-                        className={'w-[150px] h-[150px]'}>
-                    </lord-icon>
+                <div className={'flex justify-center items-center flex-col gap-y-1'}>
+                    <div className={'p-1.5 border-2 border-[#ddd] bg-[#424242]/[.3] rounded-3xl'}>
+                        <Image className={'w-[100px] h-[100px] rounded-3xl'} src={'/images/favBg-4.jpg'} alt={'image'} width={50} height={50} />
+                    </div>
 
                     <h2 className={'text-center text-[1.2rem] font-bold mb-4'}>Home</h2>
                 </div>
