@@ -54,6 +54,8 @@ body,
 }
 
 .gradient{
-    background: rgb(36,36,36);
-    background: radial-gradient(circle, rgba(36,36,36,1) 0%, rgba(36,36,36,1) 35%, rgba(255,169,0,1) 38%, rgba(251,67,171,1) 59%, rgba(36,36,36,1) 83%, rgba(36,36,36,1) 86%, rgba(36,36,36,1) 100%);
+    /*background: rgb(36,36,36);*/
+    /*background: radial-gradient(circle, rgba(36,36,36,1) 0%, rgba(36,36,36,1) 35%, rgba(255,169,0,1) 38%, rgba(251,67,171,1) 59%, rgba(36,36,36,1) 83%, rgba(36,36,36,1) 86%, rgba(36,36,36,1) 100%);*/
+    background: rgb(255,143,0);
+    background: radial-gradient(circle, rgba(255,143,0,1) 0%, rgba(255,0,54,1) 100%);
 }

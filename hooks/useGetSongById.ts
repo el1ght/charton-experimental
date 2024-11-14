@@ -14,13 +14,24 @@ const useGetSongById = (id?: string) => {
         setIsLoading(true);
 
         const fetchSong = () => {
-            const data = {
-                id: '1',
-                user_id: 'el1ght',
-                author: 'Ponomaryov',
-                title: 'Ukraine',
-                image_path: 'vevdkvfbdnb',
-            }
+                const data = [
+                    {
+                        id: '1',
+                        user_id: 'el1ght',
+                        author: 'Ponomaryov',
+                        title: 'Ukraine',
+                        image_path: 'vevdkvfbdnb',
+                    },
+                    {
+                        id: '2',
+                        user_id: 'el1ght',
+                        author: 'Lana Del Rey',
+                        title: 'Off to the Races',
+                        image_path: 'https://f003.backblazeb2.com/file/charton-thumbnails/512x512bb.webp',
+                    }
+                ]
+            // data.map((song) => song.id === id)
+            console.log(data.map((song) => song.id === id))
             // fetch from db
             // const {data, error} = await
             // if (error) {
@@ -28,7 +39,11 @@ const useGetSongById = (id?: string) => {
             //     return toast.error(error.message);
             // }
             //
-            setSong(data as Song)
+
+            // setSong(data as Song)
+
+            setSong(data.find((song) => song.id === id) as Song)
+
             setIsLoading(false);
         }
 

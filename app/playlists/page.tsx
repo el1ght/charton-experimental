@@ -17,7 +17,7 @@ const Liked = () => {
                 <h2 className={'text-center text-[1.2rem] font-bold mb-4'}>Playlists</h2>
             </div>
 
-            <div className={'relative cursor-pointer p-6 rounded-[20px] gradient text-center text-white font-bold'}>
+            <div className={'relative cursor-pointer p-6 rounded-[20px] gradient text-center font-bold'}>
                 <p>New Playlist</p>
                 <FaPlus size={20} className={'absolute right-4 top-[26px]'} />
             </div>
