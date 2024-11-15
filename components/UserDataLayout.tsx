@@ -76,85 +76,85 @@ const UserDataLayout = () => {
 
     return (
         userData ? (
-            <div className={'relative px-3 py-5 pb-20 box flex flex-col gap-y-8'}>
+            <div className={'relative py-5 pb-20 box flex flex-col gap-y-8'}>
 
-                <div className={'bg-[#0e0e0e] p-3 rounded-xl flex justify-between'}>
-                    <div className={'flex gap-x-2 items-center'}>
+                <div className={'bg-[#0e0e0e] p-3 rounded-xl flex justify-between mx-3'}>
+                    <Link href={'https://t.me/devs_cis'} className={'flex gap-x-2 items-center cursor-pointer'}>
                         <div className={'h-10 w-10 bg-white rounded-full'}></div>
                         <div>
                             <h4 className={'font-semibold text-white'}>Charton Community</h4>
                             <p className={'text-[14px] text-white'}>1,000,000,000 </p>
                         </div>
-                    </div>
-                    <div className={'bg-[#eee] py-2 px-3 rounded-3xl font-semibold flex items-center justify-center'}>
+                    </Link>
+                    <Link href={'https://t.me/devs_cis'} className={'bg-[#eee] py-2 px-3 rounded-3xl font-semibold flex items-center justify-center'}>
                         Follow
+                    </Link>
+                </div>
+
+                <div className={'flex flex-col gap-y-3'}>
+                    <div className={'text-[20px] font-bold text-[#0E0E0E] ml-3'}>
+                        Hey, <span className={'text-black'}>{userData.first_name}</span>, wanna smth special?
+                    </div>
+                    <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
+                        <div className={'align-top'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                                image
+                            </Link>
+                            <div className={'max-w-[150px] px-1'}>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>World Top</Link>
+                                <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
+                            </div>
+                        </div>
+                        <div className={'align-top'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                                image
+                            </Link>
+                            <div className={'max-w-[150px] px-1'}>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Greatest Hits</Link>
+                                <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
+                            </div>
+                        </div>
+                        <div className={'align-top'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                                image
+                            </Link>
+                            <div className={'max-w-[150px] px-1'}>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
+                                <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div className={'flex flex-col gap-y-3'}>
-                    <div className={'text-[20px] font-bold text-[#0E0E0E]'}>
-                        Hey, <span className={'text-black'}>Чекан</span>, wanna smth special?
-                    </div>
-                    <div className={' w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
-                        <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
-                                image
-                            </div>
-                            <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>World Top</h5>
-                                <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
-                            </div>
-                        </div>
-                        <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
-                                image
-                            </div>
-                            <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Greatest Hits</h5>
-                                <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
-                            </div>
-                        </div>
-                        <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
-                                image
-                            </div>
-                            <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Winter Mix</h5>
-                                <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={'flex flex-col gap-y-3'}>
-                    <div className={'text-[18px] font-bold text-[#0E0E0E]'}>
+                    <div className={'text-[18px] font-bold text-[#0E0E0E] ml-3'}>
                         Based on your preferences
                     </div>
-                    <div className={' w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
+                    <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>World Top</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Greatest Hits</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Winter Mix</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
@@ -162,113 +162,113 @@ const UserDataLayout = () => {
                 </div>
 
                 <div className={'flex flex-col gap-y-3'}>
-                    <div className={'text-[18px] font-bold text-[#0E0E0E]'}>
+                    <div className={'text-[18px] font-bold text-[#0E0E0E] ml-3'}>
                         Miss you
                     </div>
-                    <div className={' w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
+                    <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
                         <div className={'align-top'}>
-                            <div className={'relative rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1 z-10'}>
+                            <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>World Top</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'relative rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1 z-10'}>
+                            <Link href={'/playlist/414154513'} className={' relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Greatest Hits</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'relative rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1 z-10'}>
+                            <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Winter Mix</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className={'flex flex-col gap-y-3'}>
-                    <div className={'flex items-center gap-x-2'}>
-                        <div className={'w-10 h-10 bg-neutral-400 rounded-full'}></div>
-                        <p className={'text-[20px] font-bold text-[#0E0E0E]'}>LXST CXNTURY</p>
+                    <div className={'flex items-center gap-x-2 ml-3'}>
+                        <Link href={'/artists/42352543'} className={'w-10 h-10 bg-neutral-400 rounded-full'}></Link>
+                        <Link href={'/artists/42352543'} className={'text-[20px] font-bold text-[#0E0E0E]'}>LXST CXNTURY</Link>
                     </div>
-                    <div className={' w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
+                    <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>World Top</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Greatest Hits</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Winter Mix</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className={'flex flex-col gap-y-3'}>
-                    <div className={'text-[18px] font-bold text-[#0E0E0E]'}>
+                    <div className={'text-[18px] font-bold text-[#0E0E0E] ml-3'}>
                         From your playlists
                     </div>
-                    <div className={' w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
+                    <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>World Top</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Greatest Hits</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Winter Mix</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className={'flex flex-col gap-y-3'}>
+                <div className={'flex flex-col gap-y-3 mx-3'}>
                     <div className={'text-[18px] font-bold text-[#0E0E0E] flex justify-between'}>
                         <h3>Mix for you</h3>
                         <Link href={'/mix'} className={'font-normal text-[12px] flex items-center justify-center py-1 px-3 border border-[#424242] rounded-3xl'}>
@@ -288,72 +288,72 @@ const UserDataLayout = () => {
                     </div>
                 </div>
                 <div className={'flex flex-col gap-y-3'}>
-                    <div className={'text-[18px] font-bold text-[#0E0E0E]'}>
+                    <div className={'text-[18px] font-bold text-[#0E0E0E] ml-3'}>
                         Playlists for you
                     </div>
-                    <div className={' w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
+                    <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>World Top</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Greatest Hits</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Winter Mix</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className={'flex flex-col gap-y-3'}>
-                    <div className={'flex items-center gap-x-2'}>
+                    <div className={'flex items-center gap-x-2 ml-3'}>
                         <div className={'w-10 h-10 bg-neutral-400 rounded-xl'}></div>
                         <div className={'flex flex-col gap-y-1'}>
                             <p className={'uppercase text-[16px] font-normal text-neutral-400 leading-4'}>Similar to</p>
                             <h4 className={'text-[20px] font-bold leading-5 text-[#0E0E0E]'}>LXST CXNTURY</h4>
                         </div>
                     </div>
-                    <div className={' w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
+                    <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>World Top</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Greatest Hits</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Winter Mix</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
@@ -361,81 +361,84 @@ const UserDataLayout = () => {
                 </div>
 
                 <div className={'flex flex-col gap-y-3'}>
-                    <div className={'text-[18px] font-bold text-[#0E0E0E]'}>
+                    <div className={'text-[18px] font-bold text-[#0E0E0E] ml-3'}>
                         Albums for you
                     </div>
-                    <div className={' w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
+                    <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
                         <div className={'align-top'}>
-                            <div className={'relative rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1 z-10'}>
+                            <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>World Top</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'relative rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1 z-10'}>
+                            <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Greatest Hits</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'relative rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1 z-10'}>
+                            <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
-                            </div>
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Winter Mix</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className={'flex flex-col gap-y-3'}>
-                    <div className={'flex items-center gap-x-2'}>
-                        <div className={'w-10 h-10 bg-neutral-400 rounded-full'}></div>
-                        <p className={'text-[20px] font-bold text-[#0E0E0E]'}>Night Lovell</p>
+                    <div className={'flex items-center gap-x-2 ml-3'}>
+                        <Link href={'/artists/42352543'} className={'w-10 h-10 bg-neutral-400 rounded-full'}></Link>
+                        <Link href={'/artists/42352543'} className={'text-[20px] font-bold text-[#0E0E0E]'}>Night Lovell</Link>
                     </div>
-                    <div className={' w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
+                    <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>World Top</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Greatest Hits</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                         <div className={'align-top'}>
-                            <div className={'rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
+                            <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
-                            </div>
+
+                            </Link>
                             <div className={'max-w-[150px] px-1'}>
-                                <h5 className={'text-[16px] font-semibold truncate'}>Winter Mix</h5>
+                                <Link href={'/playlist/414154513'} className={'text-[16px] font-semibold truncate'}>Winter Mix</Link>
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className={'absolute bottom-2 left-0 right-0 text-center text-[#424242]'}>
+                <div className={'absolute bottom-2 left-0 right-0 text-center text-[#424242] mr-3'}>
                     <p className={'text-[12px]'}>Didn't find anything for yourself?</p>
-                    <p className={'text-[12px]'}>Try out this smart (common) search</p>
+                    <p className={'text-[12px]'}>Try our smart (common) search</p>
                 </div>
 
             </div>
@@ -443,6 +446,7 @@ const UserDataLayout = () => {
             <div className={'h-full px-3 py-5'}>
                 Loading...
             </div>
+
         )
     );
 };
