@@ -8,6 +8,8 @@ import Image from "next/image";
 import SongItem from "@/components/SongItem";
 import useOnPlay from "@/hooks/useOnPlay";
 import Link from "next/link";
+import {useRouter} from "next/navigation";
+import {backButton} from '@telegram-apps/sdk-react';
 
 interface UserData {
     id: number;
@@ -37,13 +39,15 @@ const mockSongs = [
     },
 ]
 
-const UserDataLayout = () => {
+const UserDataLayout = (back?: boolean) => {
     const [telegramId, setTelegramId] = useState<string | null>(null)
     const [userData, setUserData] = useState<UserData | null>(null)
     const [hash, setHash] = useState<string | null>(null);
     const WebApp = useWebApp();
 
     const onPlay = useOnPlay(mockSongs!);
+
+    const router = useRouter();
 
     useEffect(() => {
         if (!WebApp) return;
@@ -70,24 +74,23 @@ const UserDataLayout = () => {
             setHash(WebApp.initDataUnsafe.hash)
         }
 
-        const backButton = WebApp.BackButton;
-
-        if (window.location.search && window.location.pathname !== '/') {
-
-            backButton.mount();
-
-        } else {
-
-            backButton.hide();
-
-        }
-        backButton.onClick(() => {
-            history.back();
-        });
     }, [WebApp]);
 
     //Check if from Telegram
 
+    useEffect(() => {
+        if (back) {
+            backButton.show();
+        } else {
+            backButton.hide();
+        }
+    }, [back]);
+
+    useEffect(() => {
+        return backButton.onClick(() => {
+            router.back();
+        });
+    }, [router]);
 
     return (
         userData ? (
