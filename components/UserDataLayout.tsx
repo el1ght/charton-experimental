@@ -69,6 +69,21 @@ const UserDataLayout = () => {
             setUserData(WebApp.initDataUnsafe.user as UserData)
             setHash(WebApp.initDataUnsafe.hash)
         }
+
+        const backButton = WebApp.BackButton;
+
+        if (window.location.search && window.location.pathname !== '/') {
+
+            backButton.mount();
+
+        } else {
+
+            backButton.hide();
+
+        }
+        backButton.onClick(() => {
+            history.back();
+        });
     }, [WebApp]);
 
     //Check if from Telegram
@@ -86,7 +101,7 @@ const UserDataLayout = () => {
                             <p className={'text-[14px] text-white'}>1,000,000,000 </p>
                         </div>
                     </Link>
-                    <Link href={'https://t.me/devs_cis'} className={'bg-[#eee] py-2 px-3 rounded-3xl font-semibold flex items-center justify-center'}>
+                    <Link href={'https://t.me/devs_cis'} className={'bg-[#eee] py-2 px-3 rounded-3xl font-semibold flex items-center justify-center active:scale-95 transition'}>
                         Follow
                     </Link>
                 </div>
@@ -96,7 +111,7 @@ const UserDataLayout = () => {
                         Hey, <span className={'text-black'}>{userData.first_name}</span>, wanna smth special?
                     </div>
                     <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -105,7 +120,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -114,7 +129,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -131,7 +146,7 @@ const UserDataLayout = () => {
                         Based on your preferences
                     </div>
                     <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -140,7 +155,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -149,7 +164,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -166,7 +181,7 @@ const UserDataLayout = () => {
                         Miss you
                     </div>
                     <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
@@ -176,7 +191,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={' relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
@@ -186,7 +201,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
@@ -204,7 +219,7 @@ const UserDataLayout = () => {
                         <Link href={'/artists/42352543'} className={'text-[20px] font-bold text-[#0E0E0E]'}>LXST CXNTURY</Link>
                     </div>
                     <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -213,7 +228,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -222,7 +237,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -238,7 +253,7 @@ const UserDataLayout = () => {
                         From your playlists
                     </div>
                     <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -247,7 +262,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -256,7 +271,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -292,7 +307,7 @@ const UserDataLayout = () => {
                         Playlists for you
                     </div>
                     <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -301,7 +316,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -310,7 +325,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -330,7 +345,7 @@ const UserDataLayout = () => {
                         </div>
                     </div>
                     <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -339,7 +354,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -348,7 +363,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                             </Link>
@@ -365,7 +380,7 @@ const UserDataLayout = () => {
                         Albums for you
                     </div>
                     <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
@@ -375,7 +390,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
@@ -385,7 +400,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
                                 <div className={'absolute w-[30%] bg-[#424242] top-0 right-0 bottom-0 rounded-r-3xl'}></div>
@@ -403,7 +418,7 @@ const UserDataLayout = () => {
                         <Link href={'/artists/42352543'} className={'text-[20px] font-bold text-[#0E0E0E]'}>Night Lovell</Link>
                     </div>
                     <div className={'pl-3 w-full min-h-[160px] overflow-x-scroll overflow-hidden whitespace-nowrap flex gap-x-1'}>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
 
@@ -413,7 +428,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
 
@@ -423,7 +438,7 @@ const UserDataLayout = () => {
                                 <p className={'text-[12px] font-light truncate'}>Lana Del Rey, 21 Savage, Arctic Monkeys</p>
                             </div>
                         </div>
-                        <div className={'align-top'}>
+                        <div className={'align-top active:scale-95 transition'}>
                             <Link href={'/playlist/414154513'} className={'relative block rounded-3xl h-[150px] w-[150px] bg-neutral-400 p-3 mb-1'}>
                                 image
 
@@ -445,6 +460,7 @@ const UserDataLayout = () => {
         ) : (
             <div className={'h-full px-3 py-5'}>
                 Loading...
+
             </div>
 
         )

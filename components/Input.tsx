@@ -22,7 +22,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
                 text-[#424242]
                 border
                 border-transparent
-                text-sm
+                text-[14px]
                 file:border-0
                 placeholder:text-[#5B5B5B]
                 disabled:cursor-not-allowed
