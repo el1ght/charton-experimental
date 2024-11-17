@@ -3,8 +3,20 @@
 import Image from "next/image";
 import toast from "react-hot-toast";
 import {FiClipboard} from "react-icons/fi";
+import {backButton, init} from "@telegram-apps/sdk-react";
 
-const Liked = () => {
+const Friends = () => {
+    init()
+
+    backButton.mount()
+    backButton.show()
+
+    const off = backButton.onClick(() => {
+        off();
+        window.history.back();
+        backButton.hide()
+        backButton.unmount();
+    })
 
     const base = "https://acing.music.ton/referral?7777777";
 
@@ -31,4 +43,4 @@ const Liked = () => {
     );
 };
 
-export default Liked;
+export default Friends;

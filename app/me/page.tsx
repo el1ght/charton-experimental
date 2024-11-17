@@ -1,10 +1,25 @@
+'use client'
+
 import Image from "next/image";
 import {IoSunny} from "react-icons/io5";
 import {FaMoon} from "react-icons/fa";
+import {backButton, init} from "@telegram-apps/sdk-react";
 
-export const revalidate = 0;
+// export const revalidate = 0;
 
 const Liked = () => {
+    init()
+
+    backButton.mount()
+    backButton.show()
+
+    const off = backButton.onClick(() => {
+        off();
+        window.history.back();
+        backButton.hide()
+        backButton.unmount();
+    })
+
     const Icon = true ? FaMoon : IoSunny
 
     return (

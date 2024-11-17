@@ -1,5 +1,8 @@
+'use client'
+
 import SearchInput from "@/components/SearchInput";
 import Image from "next/image";
+import {backButton, init} from "@telegram-apps/sdk-react";
 // import SearchContent from "@/components/SearchContent";
 
 interface SearchProps {
@@ -8,9 +11,20 @@ interface SearchProps {
     }
 }
 
-export const revalidate = 0;
+// export const revalidate = 0;
 
-const Search = () => {
+const Page = () => {
+    init()
+
+    backButton.mount()
+    backButton.show()
+
+    const off = backButton.onClick(() => {
+        off();
+        window.history.back();
+        backButton.hide()
+        backButton.unmount();
+    })
 
     return (
         <div className={'px-3 py-5 box flex flex-col'}>
@@ -32,4 +46,4 @@ const Search = () => {
     );
 };
 
-export default Search;
+export default Page;

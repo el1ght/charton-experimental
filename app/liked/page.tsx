@@ -1,7 +1,9 @@
+'use client'
+
 import LikedContent from "./components/LikedContent";
 import Image from "next/image";
 import {FaPlay, FaRepeat, FaShuffle} from "react-icons/fa6";
-
+import {backButton, init} from "@telegram-apps/sdk-react";
 
 const mockSongs = [
     {
@@ -23,6 +25,17 @@ const mockSongs = [
 // export const revalidate = 0;
 
 const Liked = () => {
+    init()
+
+    backButton.mount()
+    backButton.show()
+
+    const off = backButton.onClick(() => {
+        off();
+        window.history.back();
+        backButton.hide()
+        backButton.unmount();
+    })
 
     return (
         <div className={'px-3 py-5 box flex flex-col gap-y-8'}>
@@ -53,8 +66,6 @@ const Liked = () => {
                         <FaShuffle size={20} />
                     </button>
                 </div>
-
-
             </div>
 
             <LikedContent songs={mockSongs} />

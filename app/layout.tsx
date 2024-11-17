@@ -33,11 +33,13 @@ export default function RootLayout({
         className={`${geistSans.variable} antialiased`}
       >
           <div className={'h-full flex flex-col gap-[2px] p-0.5 box'}>
+
               <ToasterProvider />
               <Content>
                   {children}
               </Content>
               <NavigationBar />
+
           </div>
           <Player />
 

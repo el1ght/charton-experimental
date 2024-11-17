@@ -1,15 +1,15 @@
 'use client'
 
 import {useState, useEffect} from "react";
-import LikedWidget from "@/components/LikedWidget";
-import {FaPlay} from "react-icons/fa6";
+
 import useWebApp from "@/hooks/useWebApp";
-import Image from "next/image";
+
 import SongItem from "@/components/SongItem";
 import useOnPlay from "@/hooks/useOnPlay";
 import Link from "next/link";
-import {useRouter} from "next/navigation";
-import {backButton} from '@telegram-apps/sdk-react';
+import {usePathname, useRouter} from "next/navigation";
+
+
 
 interface UserData {
     id: number;
@@ -39,15 +39,13 @@ const mockSongs = [
     },
 ]
 
-const UserDataLayout = (back?: boolean) => {
+const UserDataLayout = () => {
     const [telegramId, setTelegramId] = useState<string | null>(null)
     const [userData, setUserData] = useState<UserData | null>(null)
     const [hash, setHash] = useState<string | null>(null);
     const WebApp = useWebApp();
 
     const onPlay = useOnPlay(mockSongs!);
-
-    const router = useRouter();
 
     useEffect(() => {
         if (!WebApp) return;
@@ -77,20 +75,6 @@ const UserDataLayout = (back?: boolean) => {
     }, [WebApp]);
 
     //Check if from Telegram
-
-    useEffect(() => {
-        if (back) {
-            backButton.show();
-        } else {
-            backButton.hide();
-        }
-    }, [back]);
-
-    useEffect(() => {
-        return backButton.onClick(() => {
-            router.back();
-        });
-    }, [router]);
 
     return (
         userData ? (

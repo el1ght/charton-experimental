@@ -1,11 +1,26 @@
+'use client'
+
 import Image from "next/image";
 import {FaPlay} from "react-icons/fa6";
 import Link from "next/link";
 import {FaPlus} from "react-icons/fa";
+import {backButton, init} from "@telegram-apps/sdk-react";
 
-export const revalidate = 0;
+
+// export const revalidate = 0;
 
 const Liked = () => {
+    init()
+
+    backButton.mount()
+    backButton.show()
+
+    const off = backButton.onClick(() => {
+        off();
+        window.history.back();
+        backButton.hide()
+        backButton.unmount();
+    })
 
     return (
         <div className={'px-3 py-5 box flex flex-col gap-y-0.5'}>
