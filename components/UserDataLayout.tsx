@@ -25,18 +25,44 @@ interface UserData {
 const mockSongs = [
     {
         id: '1',
-        user_id: '42545235',
-        author: 'Arctic Monkeys',
-        title: 'Arabella',
-        image_path: 'string'
+        user_id: 'el1ght',
+        author: 'Ponomaryov',
+        title: 'Ukraine',
+        image_path: 'https://f003.backblazeb2.com/file/charton-thumbnails/512x512bb.webp',
+        url: 'https://charton-tracks.s3.eu-central-003.backblazeb2.com/Oleksandr+Ponomaryov.mp3',
     },
     {
         id: '2',
-        user_id: '52452355',
-        author: 'Arctic Monkeys',
-        title: '505',
-        image_path: 'string'
+        user_id: 'el1ght',
+        author: 'Lana Del Rey',
+        title: 'Off to the Races',
+        image_path: 'https://f003.backblazeb2.com/file/charton-thumbnails/512x512bb.webp',
+        url: 'https://f003.backblazeb2.com/file/charton-tracks/Lana-Del-Rey-%E2%80%93-Off-To-The-Races.m4a'
     },
+    {
+        id: '3',
+        user_id: 'el1ght',
+        author: 'Madza',
+        title: 'Late Night Drive',
+        image_path: 'https://f003.backblazeb2.com/file/charton-thumbnails/512x512bb.webp',
+        url: "https://audioplayer.madza.dev/Madza-Late_Night_Drive.mp3",
+    },
+    {
+        id: '4',
+        user_id: 'el1ght',
+        author: 'Madza',
+        title: 'Chords of Life',
+        image_path: 'https://f003.backblazeb2.com/file/charton-thumbnails/512x512bb.webp',
+        url: "https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3",
+    },
+    {
+        id: '5',
+        user_id: 'el1ght',
+        author: 'Madza',
+        title: 'Persistence',
+        image_path: 'https://f003.backblazeb2.com/file/charton-thumbnails/512x512bb.webp',
+        url: "https://audioplayer.madza.dev/Madza-Persistence.mp3",
+    }
 ]
 
 const UserDataLayout = () => {
@@ -44,8 +70,6 @@ const UserDataLayout = () => {
     const [userData, setUserData] = useState<UserData | null>(null)
     const [hash, setHash] = useState<string | null>(null);
     const WebApp = useWebApp();
-
-    const onPlay = useOnPlay(mockSongs!);
 
     useEffect(() => {
         if (!WebApp) return;
@@ -80,7 +104,7 @@ const UserDataLayout = () => {
         userData ? (
             <div className={'relative py-5 pb-20 box flex flex-col gap-y-8'}>
 
-                <div className={'bg-[#0e0e0e] p-3 rounded-xl flex justify-between mx-3'}>
+                <div className={'bg-[#0e0e0e] p-3 rounded-xl flex justify-between mx-3 '}>
                     <Link href={'https://t.me/devs_cis'} className={'flex gap-x-2 items-center cursor-pointer'}>
                         <div className={'h-10 w-10 bg-white rounded-full'}></div>
                         <div>
@@ -282,7 +306,7 @@ const UserDataLayout = () => {
                             mockSongs!.map((item: any) => (
                                 <SongItem
                                     key={item.id}
-                                    onClick={(id: string) => onPlay(id)}
+                                    onClick={() => {}}
                                     data={item}
                                 />
                             ))

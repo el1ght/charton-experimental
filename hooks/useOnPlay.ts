@@ -1,5 +1,5 @@
 import {Song} from "@/types";
-import usePlayer from "./usePlayer";
+import usePlayer from "./usePlayerStore";
 
 const useOnPlay = (songs: Song[]) => {
     const player = usePlayer();
@@ -8,8 +8,7 @@ const useOnPlay = (songs: Song[]) => {
         // if (!user) {
         //     return authModal.onOpen();
         // }
-
-        console.log(songs.map((song) => song.id))
+        console.log(id)
         player.setId(id);
         player.setIds(songs.map((song) => song.id))
     }

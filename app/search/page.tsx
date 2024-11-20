@@ -14,17 +14,17 @@ interface SearchProps {
 // export const revalidate = 0;
 
 const Page = () => {
-    init()
-
-    backButton.mount()
-    backButton.show()
-
-    const off = backButton.onClick(() => {
-        off();
-        window.history.back();
-        backButton.hide()
-        backButton.unmount();
-    })
+    // init()
+    //
+    // backButton.mount()
+    // backButton.show()
+    //
+    // const off = backButton.onClick(() => {
+    //     off();
+    //     window.history.back();
+    //     backButton.hide()
+    //     backButton.unmount();
+    // })
 
     return (
         <div className={'px-3 py-5 box flex flex-col'}>

@@ -22,6 +22,7 @@ export interface Song {
     author: string;
     title: string;
     image_path: string;
+    url: string;
 }
 
 export interface Price {

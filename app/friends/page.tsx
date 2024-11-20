@@ -6,17 +6,17 @@ import {FiClipboard} from "react-icons/fi";
 import {backButton, init} from "@telegram-apps/sdk-react";
 
 const Friends = () => {
-    init()
-
-    backButton.mount()
-    backButton.show()
-
-    const off = backButton.onClick(() => {
-        off();
-        window.history.back();
-        backButton.hide()
-        backButton.unmount();
-    })
+    // init()
+    //
+    // backButton.mount()
+    // backButton.show()
+    //
+    // const off = backButton.onClick(() => {
+    //     off();
+    //     window.history.back();
+    //     backButton.hide()
+    //     backButton.unmount();
+    // })
 
     const base = "https://acing.music.ton/referral?7777777";
 

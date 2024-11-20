@@ -1,6 +1,6 @@
 "use client"
 
-import logo from "@/public/images/logo.svg";
+import logo from "@/public/images/logo-alternative.svg";
 import {usePathname} from "next/navigation";
 import Link from "next/link";
 import {IoPerson, IoPersonAdd, IoSearch} from "react-icons/io5";
@@ -22,7 +22,7 @@ const NavigationBar = () => {
                 </Link>
 
                 <Link href={'/'}>
-                    <Image src={logo} alt={"Logo"} width={30} height={30} />
+                    <Image src={logo} alt={"Logo"} width={40} height={40} />
                 </Link>
 
                 <Link href={'/playlists'} className={`flex p-6 rounded-full bg-[#fff8f2]/[.5] justify-center items-center transition hover:bg-[#fff]/[100] shadow-md ${pathname === '/playlists' && 'bg-white'}`}>
