@@ -24,7 +24,7 @@ const SongItem: React.FC<SongItemProps> = ({
                     <FaPlay className={'ml-1'} />
                 </div>
                 <div className={'flex flex-row gap-x-2 items-center'}>
-                    <Image className={'w-[50px] h-[50px] rounded-2xl'} src={'/images/favBg-4.jpg'} alt={"Image"} width={40} height={40} />
+                    <Image className={'w-[50px] h-[50px] rounded-2xl'} src={data.image_path} alt={"Image"} width={40} height={40} />
                     <div className={'flex flex-col max-w-[100px]'}>
                         <h3 className={' truncate text-[1rem] font-bold'}>{data.title}</h3>
 
