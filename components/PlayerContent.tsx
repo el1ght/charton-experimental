@@ -5,12 +5,13 @@ import {Song} from "@/types";
 import {BsPauseFill, BsPlayFill} from "react-icons/bs";
 import {IoClose, IoPlaySkipBack, IoPlaySkipForward} from "react-icons/io5";
 import usePlayer from "@/hooks/usePlayerStore";
-import {Dispatch, SetStateAction, useEffect, useRef, useState} from "react";
+import React, {Dispatch, SetStateAction, useEffect, useRef, useState} from "react";
 import {FaPlus} from "react-icons/fa";
 import {TbRepeat} from "react-icons/tb";
 import {PiShuffleBold} from "react-icons/pi";
 import {HiSpeakerWave, HiSpeakerXMark} from "react-icons/hi2";
 import VolumeSlider from "./VolumeSlider";
+import ProgressCompact from "./ProgressCompact";
 
 interface PlayerContentProps {
     song: Song;
@@ -68,6 +69,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
             setCurrentTime(audioRef.current!.currentTime);
             const progress = parseInt(String((audioRef.current!.currentTime / audioRef.current!.duration) * 100));
             setAudioProgress(isNaN(progress)? 0 : progress)
+            progressRef.current?.style.setProperty('--seek-before-width-compact', `${(audioRef.current!.currentTime / audioRef.current!.duration) * 100}%`)
         }
     };
 
@@ -85,7 +87,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
         if (audioRef?.current){
             audioRef.current!.currentTime = Number(e.target.value) * audioRef.current!.duration / 100;
         }
-        progressRef.current!.style.setProperty('--seek-before-width', `${progressRef.current!.value}%`)
+
     }
 
 
@@ -119,6 +121,8 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
         player.setId(nextSong)
     }
 
+
+
     const onPlayPrevious = () => {
         if (player.ids.length === 0) {
             return;
@@ -150,20 +154,25 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
                         {
                             expand ? (
                                 <>
-                                    <div className={`flex flex-col h-full gap-y-0.5 transition ${expand ? 'opacity-100': 'opacity-0'}`}>
-                                        <div className={'pt-2 pl-2 pr-2 flex justify-between'}>
-                                            <button onClick={() => setExpand(false)} className={'rounded-full bg-[#737373] p-5 flex items-center justify-center'}>
-                                                <IoClose size={14} />
-                                            </button>
-                                            <button onClick={() => {}} className={'rounded-full bg-[#737373] p-5 flex items-center justify-center'}>
-                                                <FaPlus size={14} />
-                                            </button>
-                                        </div>
-                                        <div className={'grow flex items-center justify-center'}>
-                                            <div className={'border border-neutral-700 h-full w-full'} onDoubleClick={() => {}}></div>
-                                            <div className={'h-[150px] w-[150px] bg-black/[.8] absolute rounded-3xl'}></div>
-                                            <Image src={song.image_path} alt={'image'} width={150} height={150} className={'rounded-3xl filter'} />
-                                            <div className={'border border-neutral-700 h-full w-full'} onDoubleClick={() => {}}></div>
+                                    <div className={`flex flex-col h-full gap-y-0.5 transition ${expand ? 'opacity-100 ': 'opacity-0'}`}>
+
+                                        <div className={'grow flex relative'}>
+                                            <div className={'z-30 justify-between w-full px-2 pt-2'}>
+                                                <div className={'flex justify-between z-20 w-full'}>
+                                                    <button onClick={() => setExpand(false)} className={'rounded-full bg-[#737373]/[.7] p-5 flex items-center justify-center'}>
+                                                        <IoClose size={14} />
+                                                    </button>
+                                                    <button onClick={() => {}} className={'rounded-full bg-[#737373]/[.7] p-5 flex items-center justify-center'}>
+                                                        <FaPlus size={14} />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className={'h-full w-full bg-black/[.8] absolute rounded-3xl z-10'}></div>
+                                            <Image src={song.image_path} alt={'image'} width={150} height={150} className={'rounded-3xl filter h-full w-full absolute'} />
+
+                                            <div className={''} onDoubleClick={() => {}}></div>
+
+                                            <div className={''} onDoubleClick={() => {}}></div>
                                         </div>
                                         <div className={'p-6 border border-[#D6D6D6] rounded-[30px] bg-[#737373]/[.60] backdrop-blur-md'}>
                                             <div className={'text-center mb-3'}>
@@ -175,13 +184,10 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
                                                 <span>{(duration && !isNaN(duration) && formatTime(duration)) ? formatTime(duration) : "00:00"}</span>
                                             </div>
                                             <div className={'relative flex justify-center items-center'}>
-                                                {/*<Progress*/}
-                                                {/*    value={progress} onChange={(value) => setProgress(value)}*/}
-                                                {/*/>*/}
                                                 <input type="range" className={'progress-bar'} value={audioProgress} ref={progressRef} onChange={changeProgress}/>
                                             </div>
                                         </div>
-                                        <div className={'bg-[#737373]/[.60] backdrop-blur-md rounded-full p-3 border border-[#D6D6D6] flex items-center justify-center sm:justify-between'}>
+                                        <div className={'mb-2 bg-[#737373]/[.60] backdrop-blur-md rounded-full p-3 border border-[#D6D6D6] flex items-center justify-center sm:justify-between'}>
                                             <div className={'w-[120px] items-center gap-x-2 hidden sm:flex'}>
 
                                             </div>
@@ -212,7 +218,9 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
                             ) : (
                                 <>
                                     <div>
-                                        <input disabled type="range" className={'progress-bar-compact'} value={audioProgress} ref={progressRef}/>
+                                        <div className={'w-full h-[2px] absolute top-0 left-0 bg-[#ccc]'}>
+                                            <div className={'inner-line'} ref={progressRef}></div>
+                                        </div>
 
                                         <div className={'flex items-center justify-between gap-x-2'}>
                                             <div onClick={() => setExpand(true)} className={'flex gap-x-2 items-center cursor-pointer'}>
