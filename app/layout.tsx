@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
@@ -18,6 +18,17 @@ export const metadata: Metadata = {
   title: "Charton Experimental",
   description: "New Age Music App",
 };
+
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    themeColor: [
+        { media: "(prefers-color-scheme: light)", color: "0 0% 100%" },
+        { media: "(prefers-color-scheme: dark)", color: "222.2 84% 4.9%" }
+    ]
+}
 
 export default function RootLayout({
   children,

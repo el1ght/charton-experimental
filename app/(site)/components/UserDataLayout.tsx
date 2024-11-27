@@ -76,6 +76,7 @@ const UserDataLayout = () => {
 
         WebApp.ready();
         WebApp.expand();
+        // WebApp.lockOrientation(true);
 
         const initDataString = WebApp.initData;
 
@@ -102,7 +103,7 @@ const UserDataLayout = () => {
 
     return (
         userData ? (
-            <div className={'relative py-5 pb-20 box flex flex-col gap-y-8'}>
+            <div className={'relative py-5 pb-20 box flex flex-col gap-y-8 '} >
 
                 <div className={'bg-[#0e0e0e] p-3 rounded-xl flex justify-between mx-3 '}>
                     <Link href={'https://t.me/devs_cis'} className={'flex gap-x-2 items-center cursor-pointer'}>

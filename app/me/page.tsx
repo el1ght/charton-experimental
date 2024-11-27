@@ -1,35 +1,20 @@
-'use client'
+
 
 import Image from "next/image";
 import {IoSunny} from "react-icons/io5";
 import {FaMoon} from "react-icons/fa";
 import {backButton, init} from "@telegram-apps/sdk-react";
 
-// export const revalidate = 0;
 
-const Liked = () => {
-    // init()
-    //
-    // backButton.mount()
-    // backButton.show()
-    //
-    // const off = backButton.onClick(() => {
-    //     off();
-    //     window.history.back();
-    //     backButton.hide()
-    //     backButton.unmount();
-    // })
 
-    const Icon = true ? FaMoon : IoSunny
+const Page = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 1000))
 
     return (
         <div className={'relative px-3 py-5 box flex flex-col gap-y-4 '}>
-            <button className={'p-4 bg-[#424242]/[.3] transition active:bg-[#fff]/[100] shadow-md flex justify-center items-center absolute right-4 top-4 rounded-full'}>
-                <Icon size={16} />
-            </button>
             <div className={'flex flex-col justify-center items-center gap-y-1 '}>
-                <div className={'p-1.5 border-2 border-[#ddd] bg-[#424242]/[.3] rounded-3xl '}>
-                    <Image className={'w-[100px] h-[100px] rounded-3xl'} src={'/images/favBg-4.jpg'} alt={'image'} width={50} height={50} />
+                <div className={'p-1.5 border-2 border-[#ddd] bg-[#424242]/[.3] rounded-full '}>
+                    <Image className={'w-[100px] h-[100px] rounded-full'} src={'/images/favBg-4.jpg'} alt={'image'} width={50} height={50} />
                 </div>
 
                 <div className={'text-center'}>
@@ -74,7 +59,9 @@ const Liked = () => {
                 </div>
             </div>
         </div>
+
+
     );
 };
 
-export default Liked;
+export default Page;

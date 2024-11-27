@@ -1,5 +1,8 @@
 import React from "react"
 import Footer from "./Footer";
+import {bindThemeParamsCssVars} from "@telegram-apps/sdk";
+
+bindThemeParamsCssVars
 
 interface ContentProps {
     children: React.ReactNode;
