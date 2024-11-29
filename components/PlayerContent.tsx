@@ -148,9 +148,9 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
 
     return (
         <>
-            <div className={`absolute  flex justify-between  overflow-hidden ${expand ? 'm-0 bottom-0 left-0 right-0 top-0 w-full h-full transition-all ' : 'm-0.5 bottom-[89px] right-[1px] left-[1px]'}`}>
+            <div className={`absolute flex justify-between  overflow-hidden ${expand ? 'm-0 bottom-0 left-0 right-0 top-0 w-full h-full transition-all ' : 'bottom-[89px] right-0 left-0'}`}>
                 <div className={`overflow-hidden w-full`}>
-                    <div className={`relative w-full bg-[#424242]/[.5] shadow backdrop-blur-md p-1 pt-1.5 rounded-b-[30px] border-t-0 overflow-hidden ${expand ? 'h-full rounded-b-none transition-all bg-black/[.85]' : ''}`}>
+                    <div className={`border-b border-[#D6D6D6] relative w-full section-bg-color section-separator-color shadow backdrop-blur-md p-1 pt-1.5 rounded-[40px] overflow-hidden ${expand ? 'h-full rounded-b-none transition-all section-bg-color' : ''}`}>
                         {
                             expand ? (
                                 <>
@@ -232,10 +232,10 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
                                             </div>
 
                                             <div className={'flex flex-row items-center gap-x-1 bg-[#8с8с8с]/[.50] backdrop-blur-md rounded-full p-1'}>
-                                                <div onClick={togglePlayPause} className={'cursor-pointer flex items-center justify-center bg-[#FFF8F2]/[.4] shadow-xl transition active:bg-white rounded-full p-4'}>
+                                                <div onClick={togglePlayPause} className={'cursor-pointer flex items-center justify-center subtitle-text-color shadow-xl transition rounded-full p-4'}>
                                                     <Icon size={24} />
                                                 </div>
-                                                <div onClick={onPlayNext} className={'shadow-xl bg-[#FFF8F2]/[.4] flex items-center justify-center transition active:bg-white rounded-full cursor-pointer p-5'}>
+                                                <div onClick={onPlayNext} className={'shadow-xl subtitle-text-color flex items-center justify-center transition rounded-full cursor-pointer p-5'}>
                                                     <IoPlaySkipForward size={16} />
                                                 </div>
                                             </div>

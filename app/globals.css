@@ -135,11 +135,35 @@
 
 body{
   /*background: radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 255, 255) 0%, rgb(157, 157, 157) 100%) !important;*/
-    background: var(--tg-theme-bg-color);
-  color: #000 !important;
+    background: var(--tg-theme-secondary-bg-color);
   overflow: hidden !important;
 }
 
+.section-bg-color{
+    background: var(--tg-theme-section-bg-color);
+
+}
+
+.section-separator-color{
+    border-color: var(--tg-theme-section-separator-color);
+}
+
+.button-color{
+    background: var(--tg-theme-button-color);
+}
+
+.text-color{
+    color: var(--tg-theme-text-color);
+}
+
+.subtitle-text-color{
+    background: var(--tg-theme-subtitle-text-color);
+    color: var(--tg-theme-subtitle-text-color);
+}
+
+.link-color{
+    background: var(--tg-theme-link-color);
+}
 
 .box-color{
     padding: 10px;

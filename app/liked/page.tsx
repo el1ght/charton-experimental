@@ -82,13 +82,13 @@ const Liked = () => {
                 </div>
 
                 <div className={'flex items-center gap-x-5'}>
-                    <button className={'w-[50px] h-[50px] bg-[#424242]/[.2] rounded-full flex items-center justify-center'}>
+                    <button className={'w-[50px] h-[50px] section-bg-color rounded-full flex items-center justify-center'}>
                         <FaRepeat size={20} />
                     </button>
-                    <button className={'p-10 bg-[#424242]/[.4] rounded-full outline outline-2 outline-offset-4 outline-[#ddd]'}>
+                    <button className={'p-10 button-color rounded-full outline outline-2 outline-offset-4 outline-[#ddd]'}>
                         <FaPlay size={30} className={''} />
                     </button>
-                    <button className={'w-[50px] h-[50px] bg-[#424242]/[.2] rounded-full flex items-center justify-center'}>
+                    <button className={'w-[50px] h-[50px] section-bg-color rounded-full flex items-center justify-center'}>
                         <FaShuffle size={20} />
                     </button>
                 </div>

@@ -104,24 +104,6 @@ const UserDataLayout = () => {
     return (
         userData ? (
             <div className={'relative py-5 pb-20 box flex flex-col gap-y-8 '} >
-                <div>
-                    <div className="box-1 box-color">bg_color</div>
-                    <div className="box-2 box-color">text_color</div>
-                    <div className="box-3 box-color">hint_color</div>
-                    <div className="box-4 box-color">link_color</div>
-                    <div className="box-5 box-color">button_color</div>
-                    <div className="box-6 box-color">button_text_color</div>
-                    <div className="box-7 box-color">secondary_bg_color</div>
-                    <div className="box-8 box-color">header_bg_color</div>
-                    <div className="box-9 box-color">bottom_bar_bg_color</div>
-                    <div className="box-10 box-color">accent_text_color</div>
-                    <div className="box-11 box-color">section_bg_color</div>
-                    <div className="box-12 box-color">section_header_text_color</div>
-                    <div className="box-13 box-color">section_separator_color</div>
-                    <div className="box-14 box-color">subtitle_text_color</div>
-                    <div className="box-15 box-color">destructive_text_color</div>
-                </div>
-
 
                 <div className={'bg-[#0e0e0e] p-3 rounded-xl flex justify-between mx-3 '}>
                     <Link href={'https://t.me/devs_cis'} className={'flex gap-x-2 items-center cursor-pointer'}>
