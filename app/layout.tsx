@@ -43,7 +43,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} antialiased`}
       >
-          <div className={'h-full flex flex-col gap-[2px] p-0.5 box'}>
+          <div className={'h-full flex flex-col pb-3 box'}>
 
               <ToasterProvider />
               <Content>

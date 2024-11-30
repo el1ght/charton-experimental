@@ -38,7 +38,7 @@ const LikeButton = () => {
     }
 
     return (
-        <button onClick={handleLike} className={'hover:opacity-75 transition'}>
+        <button onClick={handleLike} >
             <Icon size={22} />
         </button>
     );

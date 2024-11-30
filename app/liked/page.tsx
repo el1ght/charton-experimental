@@ -64,7 +64,7 @@ const Liked = () => {
     // })
 
     return (
-        <div className={'px-3 py-5 box flex flex-col gap-y-8 pb-20'}>
+        <div className={'px-3 py-5 box flex flex-col gap-y-8 pb-20 text-color'}>
             <div className={'flex justify-center items-center flex-col gap-y-2'}>
                 <div className={'p-1.5 border-2 border-[#ddd] bg-[#424242]/[.3] rounded-3xl'}>
                     <Image className={'w-[200px] h-[200px] rounded-3xl'} src={'/images/favBg-4.jpg'} alt={'image'} width={50} height={50} />
@@ -85,7 +85,7 @@ const Liked = () => {
                     <button className={'w-[50px] h-[50px] section-bg-color rounded-full flex items-center justify-center'}>
                         <FaRepeat size={20} />
                     </button>
-                    <button className={'p-10 button-color rounded-full outline outline-2 outline-offset-4 outline-[#ddd]'}>
+                    <button className={'p-10 button-color rounded-full outline outline-2 outline-offset-4 outline-color'}>
                         <FaPlay size={30} className={''} />
                     </button>
                     <button className={'w-[50px] h-[50px] section-bg-color rounded-full flex items-center justify-center'}>

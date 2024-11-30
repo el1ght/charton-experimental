@@ -17,14 +17,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
                 flex
                 w-full
                 p-3 
-                bg-[#424242]/[.4] 
+                text-color 
                 rounded-xl 
-                text-[#424242]
+                section-bg-color 
                 border
                 border-transparent
                 text-[14px]
                 file:border-0
-                placeholder:text-[#5B5B5B]
+                placeholder:subtitle-text-color
                 disabled:cursor-not-allowed
                 disabled:opacity-50
                 focus:outline-none  

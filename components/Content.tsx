@@ -13,7 +13,7 @@ const Content: React.FC<ContentProps> = ({
 }) => {
 
     return (
-        <main className={`h-full overflow-y-auto box main text-color`}>
+        <main className={`h-full overflow-y-auto box main text-color rounded-b-[60px]`}>
             {children}
         </main>
     );
